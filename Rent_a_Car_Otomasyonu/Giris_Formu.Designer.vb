@@ -23,6 +23,7 @@ Partial Class Giris_Formu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SifreLabel = New System.Windows.Forms.Label()
@@ -30,7 +31,6 @@ Partial Class Giris_Formu
         Me.PTextBox = New System.Windows.Forms.TextBox()
         Me.KGTextBox = New System.Windows.Forms.TextBox()
         Me.GirisButton = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,6 +51,15 @@ Partial Class Giris_Formu
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Giriş Paneli"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(7, 105)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "abc"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '
@@ -112,15 +121,6 @@ Partial Class Giris_Formu
         Me.GirisButton.TabIndex = 0
         Me.GirisButton.Text = "Giriş"
         Me.GirisButton.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(7, 105)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Giris_Formu
         '
