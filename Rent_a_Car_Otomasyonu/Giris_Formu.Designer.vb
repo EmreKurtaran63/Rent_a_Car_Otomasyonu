@@ -37,7 +37,6 @@ Partial Class Giris_Formu
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Silver
-        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.CheckBox1)
         Me.GroupBox1.Controls.Add(Me.LinkLabel1)
         Me.GroupBox1.Controls.Add(Me.SifreLabel)
@@ -54,7 +53,7 @@ Partial Class Giris_Formu
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(7, 105)
+        Me.Button1.Location = New System.Drawing.Point(86, 89)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 80)
         Me.Button1.TabIndex = 7
@@ -126,7 +125,9 @@ Partial Class Giris_Formu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Giris_Formu"
         Me.Text = "Rent a Car Giriş Paneli"
