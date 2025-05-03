@@ -114,6 +114,9 @@
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ASD.resx">
+      <DependentUpon>ASD.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giris_Formu.resx">
       <DependentUpon>Giris_Formu.vb</DependentUpon>
     </EmbeddedResource>
