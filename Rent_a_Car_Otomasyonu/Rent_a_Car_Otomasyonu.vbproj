@@ -79,13 +79,6 @@
     <Compile Include="AnaMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giris_Formu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Giris_Formu.Designer.vb">
-      <DependentUpon>Giris_Formu.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -107,9 +100,6 @@
   <ItemGroup>
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Giris_Formu.resx">
-      <DependentUpon>Giris_Formu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -140,6 +130,9 @@
     <None Include="obj\Debug\Rent_a_Car_Otomasyonu.vbproj.GenerateResource.cache" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\bin\Debug\Veritabani\Rent_a_Car_Veritabani.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.exe" />
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.pdb" />
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.xml" />
