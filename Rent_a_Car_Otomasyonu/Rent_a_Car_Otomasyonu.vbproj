@@ -160,6 +160,10 @@
     <Content Include="obj\Debug\Rent_a_Car_Otomasyonu.vbproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Rent_a_Car_Otomasyonu.xml" />
     <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <None Include="Resources\yan2.png" />
+    <None Include="Resources\yan1.png" />
+    <None Include="Resources\PASWORD.png" />
+    <None Include="Resources\customer.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
