@@ -6,10 +6,10 @@ Public Class Giris_Formu
 
         Using baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Veritabani\Rent_a_Car_Veritabani.mdb")
             baglanti.Open()
-            Dim komut As New OleDb.OleDbCommand("SELECT Yetki FROM Kullanici_Tablosu where Kullanici_Adi = @Kadi and Sifre = @sifre", baglanti)
+            Dim komut As New OleDb.OleDbCommand("SELECT * FROM Personel_ve_Kullanici_Tablosu where Personel_Kullanici_Adi = @Kadi and Personel_Sifre = @sifre", baglanti)
 
-            komut.Parameters.AddWithValue("@Kadi", KGTextBox.Text)
-            komut.Parameters.AddWithValue("@sifre", PTextBox.Text)
+            komut.Parameters.AddWithValue("@Kadi", kullanicitxt.Text.Trim())
+            komut.Parameters.AddWithValue("@sifre", sifretxt.Text.Trim())
 
             Dim oku As OleDb.OleDbDataReader
             oku = komut.ExecuteReader()
@@ -20,10 +20,10 @@ Public Class Giris_Formu
                 While oku.Read()
 
 
-                    ReferanceClass.yetki = oku("Yetki")
-                        Dim anamenu As AnaMenu = New AnaMenu()
-                        anamenu.Show()
-                        Me.Hide()
+                    ReferanceClass.yetki = oku("Personel_Yetki").ToString()
+                    Dim anamenu As AnaMenu = New AnaMenu()
+                    anamenu.Show()
+                    Me.Hide()
 
 
 
@@ -60,6 +60,10 @@ Public Class Giris_Formu
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub kullanıcıtxt_TextChanged(sender As Object, e As EventArgs) Handles kullanicitxt.TextChanged
 
     End Sub
 End Class
