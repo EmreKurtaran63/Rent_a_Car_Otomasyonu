@@ -79,8 +79,7 @@
     <Compile Include="AnaMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
-=======
+
     <Compile Include="AracFormu.Designer.vb">
       <DependentUpon>AracFormu.vb</DependentUpon>
     </Compile>
@@ -100,7 +99,7 @@
     <Compile Include="MusteriFormu.vb">
       <SubType>Form</SubType>
     </Compile>
->>>>>>> OmerYilmaz
+
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -129,8 +128,7 @@
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.vb</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-=======
+
     <EmbeddedResource Include="AracFormu.resx">
       <DependentUpon>AracFormu.vb</DependentUpon>
     </EmbeddedResource>
