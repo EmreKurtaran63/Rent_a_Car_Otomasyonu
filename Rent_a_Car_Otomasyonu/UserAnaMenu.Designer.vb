@@ -36,8 +36,8 @@ Partial Class UserAnaMenu
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.Controls.Add(Me.KiralamaButton, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.MusteriButton, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.SoforButton, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.MusteriButton, 2, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
