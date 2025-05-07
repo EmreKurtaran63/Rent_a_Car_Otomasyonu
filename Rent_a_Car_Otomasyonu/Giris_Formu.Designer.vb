@@ -59,7 +59,7 @@ Partial Class Giris_Formu
         Me.CheckBox1.Location = New System.Drawing.Point(198, 247)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(98, 20)
-        Me.CheckBox1.TabIndex = 6
+        Me.CheckBox1.TabIndex = 2
         Me.CheckBox1.Text = "Beni Hatırla"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
@@ -68,7 +68,7 @@ Partial Class Giris_Formu
         Me.LinkLabel1.Location = New System.Drawing.Point(175, 270)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(145, 23)
-        Me.LinkLabel1.TabIndex = 5
+        Me.LinkLabel1.TabIndex = 3
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Şifremi Unuttum"
         Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -81,7 +81,7 @@ Partial Class Giris_Formu
         Me.GirisButton.Location = New System.Drawing.Point(59, 247)
         Me.GirisButton.Name = "GirisButton"
         Me.GirisButton.Size = New System.Drawing.Size(100, 38)
-        Me.GirisButton.TabIndex = 0
+        Me.GirisButton.TabIndex = 4
         Me.GirisButton.Text = "Giriş"
         Me.GirisButton.UseVisualStyleBackColor = False
         '
@@ -98,7 +98,7 @@ Partial Class Giris_Formu
         Me.Panel1.Location = New System.Drawing.Point(471, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(344, 452)
-        Me.Panel1.TabIndex = 2
+        Me.Panel1.TabIndex = 0
         '
         'label7
         '
@@ -129,7 +129,7 @@ Partial Class Giris_Formu
         Me.panel3.Location = New System.Drawing.Point(59, 174)
         Me.panel3.Name = "panel3"
         Me.panel3.Size = New System.Drawing.Size(237, 43)
-        Me.panel3.TabIndex = 19
+        Me.panel3.TabIndex = 1
         '
         'sifretxt
         '
@@ -137,9 +137,10 @@ Partial Class Giris_Formu
         Me.sifretxt.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.sifretxt.ForeColor = System.Drawing.SystemColors.Menu
         Me.sifretxt.Location = New System.Drawing.Point(50, 17)
+        Me.sifretxt.MaxLength = 20
         Me.sifretxt.Name = "sifretxt"
         Me.sifretxt.Size = New System.Drawing.Size(157, 15)
-        Me.sifretxt.TabIndex = 2
+        Me.sifretxt.TabIndex = 1
         Me.sifretxt.Text = "ŞİFRE"
         '
         'pictureBox6
@@ -159,7 +160,7 @@ Partial Class Giris_Formu
         Me.panel2.Location = New System.Drawing.Point(59, 123)
         Me.panel2.Name = "panel2"
         Me.panel2.Size = New System.Drawing.Size(237, 44)
-        Me.panel2.TabIndex = 18
+        Me.panel2.TabIndex = 0
         '
         'pictureBox5
         '
@@ -177,9 +178,10 @@ Partial Class Giris_Formu
         Me.kullanicitxt.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.kullanicitxt.ForeColor = System.Drawing.SystemColors.Menu
         Me.kullanicitxt.Location = New System.Drawing.Point(50, 15)
+        Me.kullanicitxt.MaxLength = 20
         Me.kullanicitxt.Name = "kullanicitxt"
         Me.kullanicitxt.Size = New System.Drawing.Size(157, 15)
-        Me.kullanicitxt.TabIndex = 1
+        Me.kullanicitxt.TabIndex = 0
         Me.kullanicitxt.Text = "KULLANICI ADI"
         '
         'Label1
@@ -258,6 +260,7 @@ Partial Class Giris_Formu
         '
         'Giris_Formu
         '
+        Me.AcceptButton = Me.GirisButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(14, Byte), Integer), CType(CType(51, Byte), Integer))

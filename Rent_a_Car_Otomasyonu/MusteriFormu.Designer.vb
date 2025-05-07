@@ -38,12 +38,12 @@ Partial Class MusteriFormu
         Me.Tctxt = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TcAratxt = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.AdSoyadAratxt = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.TelNoAratxt = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.AdSoyadAratxt = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TcAratxt = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -240,49 +240,15 @@ Partial Class MusteriFormu
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1067, 49)
         Me.TableLayoutPanel1.TabIndex = 34
         '
-        'Label5
+        'TelNoAratxt
         '
-        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(3, 13)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(171, 23)
-        Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Müşteri TC:"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'TcAratxt
-        '
-        Me.TcAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.TcAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.TcAratxt.ForeColor = System.Drawing.Color.Black
-        Me.TcAratxt.Location = New System.Drawing.Point(180, 11)
-        Me.TcAratxt.Name = "TcAratxt"
-        Me.TcAratxt.Size = New System.Drawing.Size(171, 27)
-        Me.TcAratxt.TabIndex = 26
-        '
-        'Label7
-        '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(357, 13)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(171, 23)
-        Me.Label7.TabIndex = 27
-        Me.Label7.Text = "Müşteri Ad Soyad:"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'AdSoyadAratxt
-        '
-        Me.AdSoyadAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.AdSoyadAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.AdSoyadAratxt.ForeColor = System.Drawing.Color.Black
-        Me.AdSoyadAratxt.Location = New System.Drawing.Point(534, 11)
-        Me.AdSoyadAratxt.Name = "AdSoyadAratxt"
-        Me.AdSoyadAratxt.Size = New System.Drawing.Size(171, 27)
-        Me.AdSoyadAratxt.TabIndex = 28
+        Me.TelNoAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.TelNoAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.TelNoAratxt.ForeColor = System.Drawing.Color.Black
+        Me.TelNoAratxt.Location = New System.Drawing.Point(888, 11)
+        Me.TelNoAratxt.Name = "TelNoAratxt"
+        Me.TelNoAratxt.Size = New System.Drawing.Size(171, 27)
+        Me.TelNoAratxt.TabIndex = 30
         '
         'Label8
         '
@@ -296,15 +262,49 @@ Partial Class MusteriFormu
         Me.Label8.Text = "Müşteri Tel No:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TelNoAratxt
+        'AdSoyadAratxt
         '
-        Me.TelNoAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.TelNoAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.TelNoAratxt.ForeColor = System.Drawing.Color.Black
-        Me.TelNoAratxt.Location = New System.Drawing.Point(888, 11)
-        Me.TelNoAratxt.Name = "TelNoAratxt"
-        Me.TelNoAratxt.Size = New System.Drawing.Size(171, 27)
-        Me.TelNoAratxt.TabIndex = 30
+        Me.AdSoyadAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.AdSoyadAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.AdSoyadAratxt.ForeColor = System.Drawing.Color.Black
+        Me.AdSoyadAratxt.Location = New System.Drawing.Point(534, 11)
+        Me.AdSoyadAratxt.Name = "AdSoyadAratxt"
+        Me.AdSoyadAratxt.Size = New System.Drawing.Size(171, 27)
+        Me.AdSoyadAratxt.TabIndex = 28
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(357, 13)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(171, 23)
+        Me.Label7.TabIndex = 27
+        Me.Label7.Text = "Müşteri Ad Soyad:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TcAratxt
+        '
+        Me.TcAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.TcAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.TcAratxt.ForeColor = System.Drawing.Color.Black
+        Me.TcAratxt.Location = New System.Drawing.Point(180, 11)
+        Me.TcAratxt.Name = "TcAratxt"
+        Me.TcAratxt.Size = New System.Drawing.Size(171, 27)
+        Me.TcAratxt.TabIndex = 26
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(3, 13)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(171, 23)
+        Me.Label5.TabIndex = 25
+        Me.Label5.Text = "Müşteri TC:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'MusteriFormu
         '

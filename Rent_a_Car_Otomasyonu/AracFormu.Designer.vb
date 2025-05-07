@@ -39,7 +39,14 @@ Partial Class AracFormu
         Me.EkleButton = New System.Windows.Forms.Button()
         Me.GuncelleButton = New System.Windows.Forms.Button()
         Me.SilButton = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.KMaratxt = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.PlakaAratxt = New System.Windows.Forms.TextBox()
+        Me.isaretComboBox = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -60,7 +67,8 @@ Partial Class AracFormu
         '
         Me.Plakatxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Plakatxt.ForeColor = System.Drawing.Color.Black
-        Me.Plakatxt.Location = New System.Drawing.Point(335, 231)
+        Me.Plakatxt.Location = New System.Drawing.Point(335, 274)
+        Me.Plakatxt.MaxLength = 20
         Me.Plakatxt.Name = "Plakatxt"
         Me.Plakatxt.Size = New System.Drawing.Size(181, 27)
         Me.Plakatxt.TabIndex = 1
@@ -69,7 +77,8 @@ Partial Class AracFormu
         '
         Me.Markatxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Markatxt.ForeColor = System.Drawing.Color.Black
-        Me.Markatxt.Location = New System.Drawing.Point(335, 264)
+        Me.Markatxt.Location = New System.Drawing.Point(335, 307)
+        Me.Markatxt.MaxLength = 20
         Me.Markatxt.Name = "Markatxt"
         Me.Markatxt.Size = New System.Drawing.Size(181, 27)
         Me.Markatxt.TabIndex = 2
@@ -78,7 +87,8 @@ Partial Class AracFormu
         '
         Me.cikisyili.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.cikisyili.ForeColor = System.Drawing.Color.Black
-        Me.cikisyili.Location = New System.Drawing.Point(335, 330)
+        Me.cikisyili.Location = New System.Drawing.Point(335, 373)
+        Me.cikisyili.MaxLength = 20
         Me.cikisyili.Name = "cikisyili"
         Me.cikisyili.Size = New System.Drawing.Size(181, 27)
         Me.cikisyili.TabIndex = 3
@@ -87,7 +97,8 @@ Partial Class AracFormu
         '
         Me.Kucret.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Kucret.ForeColor = System.Drawing.Color.Black
-        Me.Kucret.Location = New System.Drawing.Point(335, 396)
+        Me.Kucret.Location = New System.Drawing.Point(335, 439)
+        Me.Kucret.MaxLength = 20
         Me.Kucret.Name = "Kucret"
         Me.Kucret.Size = New System.Drawing.Size(181, 27)
         Me.Kucret.TabIndex = 6
@@ -96,7 +107,8 @@ Partial Class AracFormu
         '
         Me.Km.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Km.ForeColor = System.Drawing.Color.Black
-        Me.Km.Location = New System.Drawing.Point(335, 363)
+        Me.Km.Location = New System.Drawing.Point(335, 406)
+        Me.Km.MaxLength = 20
         Me.Km.Name = "Km"
         Me.Km.Size = New System.Drawing.Size(181, 27)
         Me.Km.TabIndex = 5
@@ -105,7 +117,8 @@ Partial Class AracFormu
         '
         Me.Modeltxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Modeltxt.ForeColor = System.Drawing.Color.Black
-        Me.Modeltxt.Location = New System.Drawing.Point(335, 297)
+        Me.Modeltxt.Location = New System.Drawing.Point(335, 340)
+        Me.Modeltxt.MaxLength = 20
         Me.Modeltxt.Name = "Modeltxt"
         Me.Modeltxt.Size = New System.Drawing.Size(181, 27)
         Me.Modeltxt.TabIndex = 4
@@ -114,7 +127,7 @@ Partial Class AracFormu
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(110, 233)
+        Me.Label1.Location = New System.Drawing.Point(110, 276)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(219, 23)
         Me.Label1.TabIndex = 7
@@ -125,7 +138,7 @@ Partial Class AracFormu
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(110, 266)
+        Me.Label2.Location = New System.Drawing.Point(110, 309)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(219, 23)
         Me.Label2.TabIndex = 8
@@ -136,7 +149,7 @@ Partial Class AracFormu
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(110, 332)
+        Me.Label3.Location = New System.Drawing.Point(110, 375)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(219, 23)
         Me.Label3.TabIndex = 10
@@ -147,7 +160,7 @@ Partial Class AracFormu
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(110, 299)
+        Me.Label4.Location = New System.Drawing.Point(110, 342)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(219, 23)
         Me.Label4.TabIndex = 9
@@ -158,7 +171,7 @@ Partial Class AracFormu
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(110, 398)
+        Me.Label5.Location = New System.Drawing.Point(110, 441)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(219, 23)
         Me.Label5.TabIndex = 12
@@ -169,7 +182,7 @@ Partial Class AracFormu
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(110, 365)
+        Me.Label6.Location = New System.Drawing.Point(110, 408)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(219, 23)
         Me.Label6.TabIndex = 11
@@ -182,7 +195,7 @@ Partial Class AracFormu
         Me.GeriButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GeriButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.GeriButton.ForeColor = System.Drawing.Color.Black
-        Me.GeriButton.Location = New System.Drawing.Point(842, 231)
+        Me.GeriButton.Location = New System.Drawing.Point(842, 274)
         Me.GeriButton.Name = "GeriButton"
         Me.GeriButton.Size = New System.Drawing.Size(162, 78)
         Me.GeriButton.TabIndex = 13
@@ -195,7 +208,7 @@ Partial Class AracFormu
         Me.EkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.EkleButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.EkleButton.ForeColor = System.Drawing.Color.Black
-        Me.EkleButton.Location = New System.Drawing.Point(644, 231)
+        Me.EkleButton.Location = New System.Drawing.Point(644, 274)
         Me.EkleButton.Name = "EkleButton"
         Me.EkleButton.Size = New System.Drawing.Size(162, 78)
         Me.EkleButton.TabIndex = 14
@@ -208,7 +221,7 @@ Partial Class AracFormu
         Me.GuncelleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GuncelleButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.GuncelleButton.ForeColor = System.Drawing.Color.Black
-        Me.GuncelleButton.Location = New System.Drawing.Point(644, 345)
+        Me.GuncelleButton.Location = New System.Drawing.Point(644, 388)
         Me.GuncelleButton.Name = "GuncelleButton"
         Me.GuncelleButton.Size = New System.Drawing.Size(162, 78)
         Me.GuncelleButton.TabIndex = 16
@@ -221,12 +234,88 @@ Partial Class AracFormu
         Me.SilButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SilButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.SilButton.ForeColor = System.Drawing.Color.Black
-        Me.SilButton.Location = New System.Drawing.Point(842, 345)
+        Me.SilButton.Location = New System.Drawing.Point(842, 388)
         Me.SilButton.Name = "SilButton"
         Me.SilButton.Size = New System.Drawing.Size(162, 78)
         Me.SilButton.TabIndex = 15
         Me.SilButton.Text = "Sil"
         Me.SilButton.UseVisualStyleBackColor = False
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 5
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.KMaratxt, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label7, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label9, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.PlakaAratxt, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.isaretComboBox, 4, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 177)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1133, 49)
+        Me.TableLayoutPanel1.TabIndex = 35
+        '
+        'KMaratxt
+        '
+        Me.KMaratxt.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.KMaratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.KMaratxt.ForeColor = System.Drawing.Color.Black
+        Me.KMaratxt.Location = New System.Drawing.Point(681, 11)
+        Me.KMaratxt.Name = "KMaratxt"
+        Me.KMaratxt.Size = New System.Drawing.Size(220, 27)
+        Me.KMaratxt.TabIndex = 28
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(504, 13)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(171, 23)
+        Me.Label7.TabIndex = 27
+        Me.Label7.Text = "KM:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(52, 13)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(171, 23)
+        Me.Label9.TabIndex = 25
+        Me.Label9.Text = "Plaka:"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'PlakaAratxt
+        '
+        Me.PlakaAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.PlakaAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.PlakaAratxt.ForeColor = System.Drawing.Color.Black
+        Me.PlakaAratxt.Location = New System.Drawing.Point(229, 11)
+        Me.PlakaAratxt.Name = "PlakaAratxt"
+        Me.PlakaAratxt.Size = New System.Drawing.Size(171, 27)
+        Me.PlakaAratxt.TabIndex = 26
+        '
+        'isaretComboBox
+        '
+        Me.isaretComboBox.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.isaretComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.isaretComboBox.FormattingEnabled = True
+        Me.isaretComboBox.Items.AddRange(New Object() {">=", "<=", ">", "<", "="})
+        Me.isaretComboBox.Location = New System.Drawing.Point(907, 12)
+        Me.isaretComboBox.Name = "isaretComboBox"
+        Me.isaretComboBox.Size = New System.Drawing.Size(121, 24)
+        Me.isaretComboBox.TabIndex = 29
         '
         'AracFormu
         '
@@ -234,6 +323,7 @@ Partial Class AracFormu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1133, 487)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.GuncelleButton)
         Me.Controls.Add(Me.SilButton)
         Me.Controls.Add(Me.EkleButton)
@@ -255,6 +345,8 @@ Partial Class AracFormu
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AracFormu"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -277,4 +369,10 @@ Partial Class AracFormu
     Friend WithEvents EkleButton As Button
     Friend WithEvents GuncelleButton As Button
     Friend WithEvents SilButton As Button
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents PlakaAratxt As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents KMaratxt As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents isaretComboBox As ComboBox
 End Class

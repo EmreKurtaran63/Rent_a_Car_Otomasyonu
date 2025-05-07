@@ -109,4 +109,8 @@ Public Class Giris_Formu
             sifretxt.ForeColor = SystemColors.Menu
         End If
     End Sub
+
+    Private Sub Giris_Formu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Application.Exit()
+    End Sub
 End Class

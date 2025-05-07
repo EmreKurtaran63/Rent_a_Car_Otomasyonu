@@ -85,12 +85,6 @@
     <Compile Include="AracFormu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ASD.Designer.vb">
-      <DependentUpon>ASD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ASD.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Giris_Formu.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -134,9 +128,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AracFormu.resx">
       <DependentUpon>AracFormu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ASD.resx">
-      <DependentUpon>ASD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giris_Formu.resx">
       <DependentUpon>Giris_Formu.vb</DependentUpon>

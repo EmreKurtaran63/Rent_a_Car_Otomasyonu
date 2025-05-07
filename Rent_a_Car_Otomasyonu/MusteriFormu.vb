@@ -95,9 +95,16 @@ Public Class MusteriFormu
     End Sub
 
     Private Sub GeriButton_Click(sender As Object, e As EventArgs) Handles GeriButton.Click
-        Dim anamenu As AnaMenu = New AnaMenu()
-        anamenu.Show()
-        Me.Hide()
+        If ReferanceClass.yetki = "admin" Then
+            Dim anamenu As AnaMenu = New AnaMenu()
+            anamenu.Show()
+            Me.Hide()
+        Else
+            Dim uanamenu As UserAnaMenu = New UserAnaMenu()
+            uanamenu.Show()
+            Me.Hide()
+        End If
+
     End Sub
 
     Private Sub MusteriFormu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -114,5 +121,39 @@ Public Class MusteriFormu
 
     Private Sub TelNoAratxt_TextChanged(sender As Object, e As EventArgs) Handles TelNoAratxt.TextChanged
         Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
+    End Sub
+
+    Private Sub TcAratxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TcAratxt.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub Tctxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Tctxt.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub Yastxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Yastxt.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TelNotxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TelNotxt.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TelNoAratxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TelNoAratxt.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub MusteriFormu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Application.Exit()
     End Sub
 End Class
