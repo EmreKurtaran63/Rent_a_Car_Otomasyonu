@@ -79,7 +79,6 @@
     <Compile Include="AnaMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="AracFormu.Designer.vb">
       <DependentUpon>AracFormu.vb</DependentUpon>
     </Compile>
@@ -99,7 +98,6 @@
     <Compile Include="MusteriFormu.vb">
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -169,15 +167,12 @@
     <None Include="obj\Debug\Rent_a_Car_Otomasyonu.vbproj.GenerateResource.cache" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\bin\Debug\Veritabani\Rent_a_Car_Veritabani.mdb">
+    <Content Include="bin\Debug\Veritabani\Rent_a_Car_Veritabani.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.exe" />
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.pdb" />
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.xml" />
-    <Content Include="bin\Debug\Veritabani\Rent_a_Car_Veritabani.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="obj\Debug\Rent_a_Car_Otomasyonu.exe" />
     <Content Include="obj\Debug\Rent_a_Car_Otomasyonu.pdb" />
     <Content Include="obj\Debug\Rent_a_Car_Otomasyonu.vbproj.FileListAbsolute.txt" />
@@ -189,6 +184,7 @@
     <None Include="Resources\customer.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Debug\bin\Debug\" />
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
