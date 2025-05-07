@@ -21,9 +21,16 @@ Public Class Giris_Formu
 
 
                     ReferanceClass.yetki = oku("Personel_Yetki").ToString()
-                    Dim anamenu As AnaMenu = New AnaMenu()
-                    anamenu.Show()
-                    Me.Hide()
+                    If oku("Personel_Yetki").ToString() = "admin" Then
+                        Dim anamenu As AnaMenu = New AnaMenu()
+                        anamenu.Show()
+                        Me.Hide()
+                    Else
+                        Dim uanamenu As UserAnaMenu = New UserAnaMenu()
+                        uanamenu.Show()
+                        Me.Hide()
+                    End If
+
 
 
 
@@ -63,7 +70,43 @@ Public Class Giris_Formu
 
     End Sub
 
-    Private Sub kullanıcıtxt_TextChanged(sender As Object, e As EventArgs) Handles kullanicitxt.TextChanged
+    Private Sub kullanıcıtxt_TextChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub kullanicitxt_Click(sender As Object, e As EventArgs)
+        MessageBox.Show("asd")
+    End Sub
+
+    Private Sub kullanicitxt_TextChanged(sender As Object, e As EventArgs)
+        MessageBox.Show("asd")
+    End Sub
+
+    Private Sub kullanicitxt_Enter(sender As Object, e As EventArgs) Handles kullanicitxt.Enter
+        If kullanicitxt.ForeColor = SystemColors.Menu Then
+            kullanicitxt.Text = String.Empty
+            kullanicitxt.ForeColor = Color.White
+        End If
+    End Sub
+
+    Private Sub kullanicitxt_Leave(sender As Object, e As EventArgs) Handles kullanicitxt.Leave
+        If kullanicitxt.Text.Trim() = String.Empty Then
+            kullanicitxt.Text = "KULLANICI ADI"
+            kullanicitxt.ForeColor = SystemColors.Menu
+        End If
+    End Sub
+
+    Private Sub sifretxt_Enter(sender As Object, e As EventArgs) Handles sifretxt.Enter
+        If sifretxt.ForeColor = SystemColors.Menu Then
+            sifretxt.Text = String.Empty
+            sifretxt.ForeColor = Color.White
+        End If
+    End Sub
+
+    Private Sub sifretxt_Leave(sender As Object, e As EventArgs) Handles sifretxt.Leave
+        If sifretxt.Text.Trim() = String.Empty Then
+            sifretxt.Text = "ŞİFRE"
+            sifretxt.ForeColor = SystemColors.Menu
+        End If
     End Sub
 End Class

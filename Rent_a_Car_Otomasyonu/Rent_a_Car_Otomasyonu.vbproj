@@ -121,6 +121,12 @@
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.vb" />
     <Compile Include="ReferanceClass.vb" />
+    <Compile Include="UserAnaMenu.Designer.vb">
+      <DependentUpon>UserAnaMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserAnaMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AnaMenu.resx">
@@ -147,6 +153,9 @@
     <EmbeddedResource Include="obj\Debug\Rent_a_Car_Otomasyonu.AnaMenu.resources" />
     <EmbeddedResource Include="obj\Debug\Rent_a_Car_Otomasyonu.Giris_Formu.resources" />
     <EmbeddedResource Include="obj\Debug\Rent_a_Car_Otomasyonu.Resources.resources" />
+    <EmbeddedResource Include="UserAnaMenu.resx">
+      <DependentUpon>UserAnaMenu.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Rent_a_Car_Otomasyonu.exe.config" />

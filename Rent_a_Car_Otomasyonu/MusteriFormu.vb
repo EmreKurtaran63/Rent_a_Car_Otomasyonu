@@ -24,7 +24,7 @@ Public Class MusteriFormu
             Dim obj As Integer = cmd.ExecuteNonQuery()
             If obj > 0 Then
                 MessageBox.Show("Eklendi")
-                Listele()
+                Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
             Else
                 MessageBox.Show("Hata")
             End If
@@ -34,11 +34,14 @@ Public Class MusteriFormu
         End Try
     End Sub
 
-    Private Sub Listele()
+    Private Sub Listele(tc As String, ad As String, telno As String)
         Dim baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source='Veritabani/Rent_a_Car_Veritabani.mdb'") 'Veritabanımızın yerini belirtiyoruz.
-        Dim selectkomutu As String = "select * from Musteri_Tablosu"
+        Dim selectkomutu As String = "select * from Musteri_Tablosu where Musteri_TC Like @tc and Musteri_Ad_Soyad like @adsoyad and Musteri_Telefon_No like @telno"
         Dim veriler As New DataTable()
         Dim adapter As New OleDbDataAdapter(selectkomutu, baglanti)
+        adapter.SelectCommand.Parameters.AddWithValue("@tc", "%" + tc + "%")
+        adapter.SelectCommand.Parameters.AddWithValue("@adsoyad", "%" + ad + "%")
+        adapter.SelectCommand.Parameters.AddWithValue("@telno", "%" + telno + "%")
         adapter.Fill(veriler) 'buradaki veriler oluşturduğumuz sanal tablo.
         DataGridView1.DataSource = veriler 'veri tabanından gelen kayıtları DataGridView'e aktarıyoruz .
     End Sub
@@ -59,7 +62,7 @@ Public Class MusteriFormu
             Dim obj As Integer = cmd.ExecuteNonQuery()
             If obj > 0 Then
                 MessageBox.Show("Güncellendi")
-                Listele()
+                Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
             Else
                 MessageBox.Show("Hata")
             End If
@@ -81,7 +84,7 @@ Public Class MusteriFormu
             Dim obj As Integer = cmd.ExecuteNonQuery()
             If obj > 0 Then
                 MessageBox.Show("Silindi")
-                Listele()
+                Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
             Else
                 MessageBox.Show("Bulunamadı")
             End If
@@ -98,6 +101,18 @@ Public Class MusteriFormu
     End Sub
 
     Private Sub MusteriFormu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Listele()
+        Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
+    End Sub
+
+    Private Sub TcAratxt_TextChanged(sender As Object, e As EventArgs) Handles TcAratxt.TextChanged
+        Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
+    End Sub
+
+    Private Sub AdSoyadAratxt_TextChanged(sender As Object, e As EventArgs) Handles AdSoyadAratxt.TextChanged
+        Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
+    End Sub
+
+    Private Sub TelNoAratxt_TextChanged(sender As Object, e As EventArgs) Handles TelNoAratxt.TextChanged
+        Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
     End Sub
 End Class
