@@ -138,7 +138,7 @@
     <EmbeddedResource Include="MusteriFormu.resx">
       <DependentUpon>MusteriFormu.vb</DependentUpon>
     </EmbeddedResource>
-
+>>>>>>> OmerYilmaz
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
