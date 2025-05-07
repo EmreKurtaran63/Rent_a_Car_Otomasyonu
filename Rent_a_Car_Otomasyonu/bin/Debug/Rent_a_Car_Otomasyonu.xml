@@ -8,18 +8,38 @@ Rent_a_Car_Otomasyonu
 <members>
 <member name="T:Rent_a_Car_Otomasyonu.My.Resources.Resources">
 <summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+  Yerelleştirilmiş dizeleri aramak gibi işlemler için, türü kesin olarak belirtilmiş kaynak sınıfı.
 </summary>
 </member>
 <member name="P:Rent_a_Car_Otomasyonu.My.Resources.Resources.ResourceManager">
 <summary>
-  Returns the cached ResourceManager instance used by this class.
+  Bu sınıf tarafından kullanılan, önbelleğe alınmış ResourceManager örneğini döndürür.
 </summary>
 </member>
 <member name="P:Rent_a_Car_Otomasyonu.My.Resources.Resources.Culture">
 <summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+  Tümü için geçerli iş parçacığının CurrentUICulture özelliğini geçersiz kular
+  CurrentUICulture özelliğini tüm kaynak aramaları için geçersiz kılar.
+</summary>
+</member>
+<member name="P:Rent_a_Car_Otomasyonu.My.Resources.Resources.customer">
+<summary>
+  System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+</summary>
+</member>
+<member name="P:Rent_a_Car_Otomasyonu.My.Resources.Resources.PASWORD">
+<summary>
+  System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+</summary>
+</member>
+<member name="P:Rent_a_Car_Otomasyonu.My.Resources.Resources.yan1">
+<summary>
+  System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+</summary>
+</member>
+<member name="P:Rent_a_Car_Otomasyonu.My.Resources.Resources.yan2">
+<summary>
+  System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
 </summary>
 </member>
 </members>
