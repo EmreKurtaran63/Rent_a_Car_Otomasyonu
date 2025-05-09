@@ -127,6 +127,15 @@ Public Class AracFormu
     End Sub
 
     Private Sub KMaratxt_TextChanged(sender As Object, e As EventArgs) Handles KMaratxt.TextChanged
+        If KMaratxt.Text.StartsWith("0") And KMaratxt.Text.Trim().Length > 1 Then
+            KMaratxt.Text = KMaratxt.Text.Substring(1)
+            KMaratxt.SelectionStart = KMaratxt.Text.Length
+        End If
+
+        If KMaratxt.Text = String.Empty Then
+            KMaratxt.Text = "0"
+            KMaratxt.SelectionStart = KMaratxt.Text.Length
+        End If
         kmAra = KMaratxt.Text.Trim()
         Listele(PlakaAratxt.Text.Trim(), kmAra, isaret)
     End Sub
