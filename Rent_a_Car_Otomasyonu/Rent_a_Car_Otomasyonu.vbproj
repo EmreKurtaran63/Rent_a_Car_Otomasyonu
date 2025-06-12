@@ -102,6 +102,12 @@
     <Compile Include="AracFormu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CalisanFormu.Designer.vb">
+      <DependentUpon>CalisanFormu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CalisanFormu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Giris_Formu.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <EmbeddedResource Include="AracFormu.resx">
       <DependentUpon>AracFormu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalisanFormu.resx">
+      <DependentUpon>CalisanFormu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giris_Formu.resx">
       <DependentUpon>Giris_Formu.vb</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +191,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Visual Basic Projesi.docx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.exe" />

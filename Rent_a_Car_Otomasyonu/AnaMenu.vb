@@ -28,4 +28,9 @@
         KiralamaFormu.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        CalisanFormu.Show()
+        Me.Hide()
+    End Sub
 End Class
