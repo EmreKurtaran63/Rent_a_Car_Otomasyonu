@@ -1,6 +1,4 @@
-﻿Imports System.Data.OleDb
-
-Public Class AnaMenu
+﻿Public Class AnaMenu
     Private Sub AnaMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -14,12 +12,20 @@ Public Class AnaMenu
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim musterifrm As MusteriFormu = New MusteriFormu()
-        musterifrm.Show()
+        MusteriFormu.Show()
         Me.Hide()
     End Sub
 
     Private Sub AnaMenu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
+    End Sub
+
+    Private Sub GuvenliCikisButton_Click(sender As Object, e As EventArgs) Handles GuvenliCikisButton.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub KiralamaButton_Click(sender As Object, e As EventArgs) Handles KiralamaButton.Click
+        KiralamaFormu.Show()
+        Me.Hide()
     End Sub
 End Class

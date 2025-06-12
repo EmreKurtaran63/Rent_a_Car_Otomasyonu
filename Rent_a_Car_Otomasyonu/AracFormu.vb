@@ -156,6 +156,13 @@ Public Class AracFormu
         Application.Exit()
     End Sub
 
+    Private Sub cikisyili_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cikisyili.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+
     Private Sub Km_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Km.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
             e.Handled = True

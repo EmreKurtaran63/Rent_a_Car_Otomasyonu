@@ -1,5 +1,4 @@
 ﻿Imports System.Data.OleDb
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Giris_Formu
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles GirisButton.Click
@@ -111,6 +110,10 @@ Public Class Giris_Formu
     End Sub
 
     Private Sub Giris_Formu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Application.Exit()
+    End Sub
+
+    Private Sub GuvenliCikisButton_Click(sender As Object, e As EventArgs) Handles GuvenliCikisButton.Click
         Application.Exit()
     End Sub
 End Class

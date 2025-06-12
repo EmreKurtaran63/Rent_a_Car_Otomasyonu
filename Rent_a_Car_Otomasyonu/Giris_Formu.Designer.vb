@@ -23,17 +23,15 @@ Partial Class Giris_Formu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Giris_Formu))
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.GirisButton = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GuvenliCikisButton = New System.Windows.Forms.Button()
         Me.label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.panel3 = New System.Windows.Forms.Panel()
         Me.sifretxt = New System.Windows.Forms.TextBox()
-        Me.pictureBox6 = New System.Windows.Forms.PictureBox()
         Me.panel2 = New System.Windows.Forms.Panel()
-        Me.pictureBox5 = New System.Windows.Forms.PictureBox()
         Me.kullanicitxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -41,33 +39,24 @@ Partial Class Giris_Formu
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.pictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.pictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.panel3.SuspendLayout()
-        CType(Me.pictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel2.SuspendLayout()
-        CType(Me.pictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.CheckBox1.Location = New System.Drawing.Point(198, 247)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(98, 20)
-        Me.CheckBox1.TabIndex = 2
-        Me.CheckBox1.Text = "Beni Hatırla"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'LinkLabel1
         '
-        Me.LinkLabel1.Location = New System.Drawing.Point(175, 270)
+        Me.LinkLabel1.Location = New System.Drawing.Point(59, 248)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(145, 23)
+        Me.LinkLabel1.Size = New System.Drawing.Size(237, 23)
         Me.LinkLabel1.TabIndex = 3
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Şifremi Unuttum"
@@ -78,9 +67,9 @@ Partial Class Giris_Formu
         Me.GirisButton.BackColor = System.Drawing.Color.Green
         Me.GirisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GirisButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.GirisButton.Location = New System.Drawing.Point(59, 247)
+        Me.GirisButton.Location = New System.Drawing.Point(59, 277)
         Me.GirisButton.Name = "GirisButton"
-        Me.GirisButton.Size = New System.Drawing.Size(100, 38)
+        Me.GirisButton.Size = New System.Drawing.Size(237, 38)
         Me.GirisButton.TabIndex = 4
         Me.GirisButton.Text = "Giriş"
         Me.GirisButton.UseVisualStyleBackColor = False
@@ -88,10 +77,10 @@ Partial Class Giris_Formu
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(14, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.GuvenliCikisButton)
         Me.Panel1.Controls.Add(Me.label7)
         Me.Panel1.Controls.Add(Me.GirisButton)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.CheckBox1)
         Me.Panel1.Controls.Add(Me.LinkLabel1)
         Me.Panel1.Controls.Add(Me.panel3)
         Me.Panel1.Controls.Add(Me.panel2)
@@ -99,6 +88,18 @@ Partial Class Giris_Formu
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(344, 452)
         Me.Panel1.TabIndex = 0
+        '
+        'GuvenliCikisButton
+        '
+        Me.GuvenliCikisButton.BackColor = System.Drawing.Color.Green
+        Me.GuvenliCikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GuvenliCikisButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.GuvenliCikisButton.Location = New System.Drawing.Point(59, 321)
+        Me.GuvenliCikisButton.Name = "GuvenliCikisButton"
+        Me.GuvenliCikisButton.Size = New System.Drawing.Size(237, 38)
+        Me.GuvenliCikisButton.TabIndex = 23
+        Me.GuvenliCikisButton.Text = "Güvenli Çıkış"
+        Me.GuvenliCikisButton.UseVisualStyleBackColor = False
         '
         'label7
         '
@@ -143,16 +144,6 @@ Partial Class Giris_Formu
         Me.sifretxt.TabIndex = 1
         Me.sifretxt.Text = "ŞİFRE"
         '
-        'pictureBox6
-        '
-        Me.pictureBox6.Image = Global.Rent_a_Car_Otomasyonu.My.Resources.Resources.PASWORD
-        Me.pictureBox6.Location = New System.Drawing.Point(3, 6)
-        Me.pictureBox6.Name = "pictureBox6"
-        Me.pictureBox6.Size = New System.Drawing.Size(41, 36)
-        Me.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pictureBox6.TabIndex = 12
-        Me.pictureBox6.TabStop = False
-        '
         'panel2
         '
         Me.panel2.Controls.Add(Me.pictureBox5)
@@ -161,16 +152,6 @@ Partial Class Giris_Formu
         Me.panel2.Name = "panel2"
         Me.panel2.Size = New System.Drawing.Size(237, 44)
         Me.panel2.TabIndex = 0
-        '
-        'pictureBox5
-        '
-        Me.pictureBox5.Image = Global.Rent_a_Car_Otomasyonu.My.Resources.Resources.customer
-        Me.pictureBox5.Location = New System.Drawing.Point(3, 3)
-        Me.pictureBox5.Name = "pictureBox5"
-        Me.pictureBox5.Size = New System.Drawing.Size(41, 36)
-        Me.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pictureBox5.TabIndex = 3
-        Me.pictureBox5.TabStop = False
         '
         'kullanicitxt
         '
@@ -249,6 +230,26 @@ Partial Class Giris_Formu
         Me.PictureBox2.TabIndex = 8
         Me.PictureBox2.TabStop = False
         '
+        'pictureBox6
+        '
+        Me.pictureBox6.Image = Global.Rent_a_Car_Otomasyonu.My.Resources.Resources.PASWORD
+        Me.pictureBox6.Location = New System.Drawing.Point(3, 6)
+        Me.pictureBox6.Name = "pictureBox6"
+        Me.pictureBox6.Size = New System.Drawing.Size(41, 36)
+        Me.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pictureBox6.TabIndex = 12
+        Me.pictureBox6.TabStop = False
+        '
+        'pictureBox5
+        '
+        Me.pictureBox5.Image = Global.Rent_a_Car_Otomasyonu.My.Resources.Resources.customer
+        Me.pictureBox5.Location = New System.Drawing.Point(3, 3)
+        Me.pictureBox5.Name = "pictureBox5"
+        Me.pictureBox5.Size = New System.Drawing.Size(41, 36)
+        Me.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pictureBox5.TabIndex = 3
+        Me.pictureBox5.TabStop = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
@@ -273,6 +274,7 @@ Partial Class Giris_Formu
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Giris_Formu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Rent a Car Giriş Paneli"
@@ -280,19 +282,18 @@ Partial Class Giris_Formu
         Me.Panel1.PerformLayout()
         Me.panel3.ResumeLayout(False)
         Me.panel3.PerformLayout()
-        CType(Me.pictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panel2.ResumeLayout(False)
         Me.panel2.PerformLayout()
-        CType(Me.pictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents GirisButton As Button
-    Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
@@ -310,4 +311,5 @@ Partial Class Giris_Formu
     Private WithEvents kullanicitxt As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents GuvenliCikisButton As Button
 End Class

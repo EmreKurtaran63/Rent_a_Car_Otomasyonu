@@ -1,7 +1,6 @@
 ﻿Public Class UserAnaMenu
     Private Sub MusteriButton_Click(sender As Object, e As EventArgs) Handles MusteriButton.Click
-        Dim musterifrm As MusteriFormu = New MusteriFormu()
-        musterifrm.Show()
+
         Me.Hide()
     End Sub
 
