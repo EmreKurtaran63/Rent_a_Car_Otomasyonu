@@ -17,10 +17,8 @@ Public Class Giris_Formu
             If oku.HasRows Then
 
                 While oku.Read()
-
-
                     ReferanceClass.yetki = oku("Personel_Yetki").ToString()
-                    If oku("Personel_Yetki").ToString() = "admin" Then
+                    If oku("Personel_Yetki").ToString() = "ADMİN" Then
                         Dim anamenu As AnaMenu = New AnaMenu()
                         anamenu.Show()
                         Me.Hide()
@@ -29,9 +27,6 @@ Public Class Giris_Formu
                         uanamenu.Show()
                         Me.Hide()
                     End If
-
-
-
 
                 End While
 

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class CalisanFormu
+Partial Class PersonelFormu
     Inherits System.Windows.Forms.Form
 
     'Form, bileşen listesini temizlemeyi bırakmayı geçersiz kılar.
@@ -32,8 +32,8 @@ Partial Class CalisanFormu
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Adrestxt = New System.Windows.Forms.TextBox()
-        Me.Yastxt = New System.Windows.Forms.TextBox()
-        Me.TelNotxt = New System.Windows.Forms.TextBox()
+        Me.KAditxt = New System.Windows.Forms.TextBox()
+        Me.Sifretxt = New System.Windows.Forms.TextBox()
         Me.AdSoyadtxt = New System.Windows.Forms.TextBox()
         Me.Tctxt = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -44,6 +44,10 @@ Partial Class CalisanFormu
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TcAratxt = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TelNotxt = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.YetkiCombobox = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -104,33 +108,33 @@ Partial Class CalisanFormu
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(9, 397)
+        Me.Label6.Location = New System.Drawing.Point(9, 430)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(219, 23)
         Me.Label6.TabIndex = 28
-        Me.Label6.Text = "Çalışan Adres:"
+        Me.Label6.Text = "Personel Yetki:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(9, 364)
+        Me.Label3.Location = New System.Drawing.Point(9, 397)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(219, 23)
         Me.Label3.TabIndex = 27
-        Me.Label3.Text = "Çalışan Tel No:"
+        Me.Label3.Text = "Personel Şifre:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(9, 331)
+        Me.Label4.Location = New System.Drawing.Point(9, 364)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(219, 23)
         Me.Label4.TabIndex = 26
-        Me.Label4.Text = "Çalışan Yaş:"
+        Me.Label4.Text = "Personel Kullanıcı Adı:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label2
@@ -141,7 +145,7 @@ Partial Class CalisanFormu
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(219, 23)
         Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Çalışan Ad Soyad:"
+        Me.Label2.Text = "Personel Ad Soyad:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label1
@@ -152,39 +156,43 @@ Partial Class CalisanFormu
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(219, 23)
         Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Çalışan TC:"
+        Me.Label1.Text = "Personel TC:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Adrestxt
         '
+        Me.Adrestxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Adrestxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Adrestxt.ForeColor = System.Drawing.Color.Black
-        Me.Adrestxt.Location = New System.Drawing.Point(234, 395)
+        Me.Adrestxt.Location = New System.Drawing.Point(234, 459)
         Me.Adrestxt.Name = "Adrestxt"
         Me.Adrestxt.Size = New System.Drawing.Size(181, 27)
         Me.Adrestxt.TabIndex = 22
         '
-        'Yastxt
+        'KAditxt
         '
-        Me.Yastxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Yastxt.ForeColor = System.Drawing.Color.Black
-        Me.Yastxt.Location = New System.Drawing.Point(234, 329)
-        Me.Yastxt.Name = "Yastxt"
-        Me.Yastxt.Size = New System.Drawing.Size(181, 27)
-        Me.Yastxt.TabIndex = 21
+        Me.KAditxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.KAditxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.KAditxt.ForeColor = System.Drawing.Color.Black
+        Me.KAditxt.Location = New System.Drawing.Point(234, 362)
+        Me.KAditxt.Name = "KAditxt"
+        Me.KAditxt.Size = New System.Drawing.Size(181, 27)
+        Me.KAditxt.TabIndex = 21
         '
-        'TelNotxt
+        'Sifretxt
         '
-        Me.TelNotxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.TelNotxt.ForeColor = System.Drawing.Color.Black
-        Me.TelNotxt.Location = New System.Drawing.Point(234, 362)
-        Me.TelNotxt.MaxLength = 11
-        Me.TelNotxt.Name = "TelNotxt"
-        Me.TelNotxt.Size = New System.Drawing.Size(181, 27)
-        Me.TelNotxt.TabIndex = 20
+        Me.Sifretxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Sifretxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Sifretxt.ForeColor = System.Drawing.Color.Black
+        Me.Sifretxt.Location = New System.Drawing.Point(234, 395)
+        Me.Sifretxt.MaxLength = 11
+        Me.Sifretxt.Name = "Sifretxt"
+        Me.Sifretxt.Size = New System.Drawing.Size(181, 27)
+        Me.Sifretxt.TabIndex = 20
         '
         'AdSoyadtxt
         '
+        Me.AdSoyadtxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.AdSoyadtxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.AdSoyadtxt.ForeColor = System.Drawing.Color.Black
         Me.AdSoyadtxt.Location = New System.Drawing.Point(234, 296)
@@ -195,6 +203,7 @@ Partial Class CalisanFormu
         '
         'Tctxt
         '
+        Me.Tctxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tctxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Tctxt.ForeColor = System.Drawing.Color.Black
         Me.Tctxt.Location = New System.Drawing.Point(234, 263)
@@ -259,7 +268,7 @@ Partial Class CalisanFormu
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(171, 23)
         Me.Label8.TabIndex = 29
-        Me.Label8.Text = "Çalışan Tel No:"
+        Me.Label8.Text = "Personel Tel No:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'AdSoyadAratxt
@@ -281,7 +290,7 @@ Partial Class CalisanFormu
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(171, 23)
         Me.Label7.TabIndex = 27
-        Me.Label7.Text = "Çalışan Ad Soyad:"
+        Me.Label7.Text = "Personel Ad Soyad:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TcAratxt
@@ -303,32 +312,78 @@ Partial Class CalisanFormu
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(171, 23)
         Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Çalışan TC:"
+        Me.Label5.Text = "Personel TC:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'CalisanFormu
+        'Label9
+        '
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(9, 463)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(219, 23)
+        Me.Label9.TabIndex = 28
+        Me.Label9.Text = "Personel Adres:"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TelNotxt
+        '
+        Me.TelNotxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TelNotxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.TelNotxt.ForeColor = System.Drawing.Color.Black
+        Me.TelNotxt.Location = New System.Drawing.Point(234, 329)
+        Me.TelNotxt.Name = "TelNotxt"
+        Me.TelNotxt.Size = New System.Drawing.Size(181, 27)
+        Me.TelNotxt.TabIndex = 22
+        '
+        'Label10
+        '
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(9, 333)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(219, 23)
+        Me.Label10.TabIndex = 28
+        Me.Label10.Text = "Personel Tel No:"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'YetkiCombobox
+        '
+        Me.YetkiCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.YetkiCombobox.FormattingEnabled = True
+        Me.YetkiCombobox.Items.AddRange(New Object() {"USER", "ADMİN"})
+        Me.YetkiCombobox.Location = New System.Drawing.Point(234, 429)
+        Me.YetkiCombobox.Name = "YetkiCombobox"
+        Me.YetkiCombobox.Size = New System.Drawing.Size(181, 24)
+        Me.YetkiCombobox.TabIndex = 35
+        '
+        'PersonelFormu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1067, 529)
+        Me.Controls.Add(Me.YetkiCombobox)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.GuncelleButton)
         Me.Controls.Add(Me.SilButton)
         Me.Controls.Add(Me.EkleButton)
         Me.Controls.Add(Me.GeriButton)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Adrestxt)
-        Me.Controls.Add(Me.Yastxt)
         Me.Controls.Add(Me.TelNotxt)
+        Me.Controls.Add(Me.Adrestxt)
+        Me.Controls.Add(Me.KAditxt)
+        Me.Controls.Add(Me.Sifretxt)
         Me.Controls.Add(Me.AdSoyadtxt)
         Me.Controls.Add(Me.Tctxt)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "CalisanFormu"
+        Me.Name = "PersonelFormu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CalisanFormu"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -349,8 +404,8 @@ Partial Class CalisanFormu
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Adrestxt As TextBox
-    Friend WithEvents Yastxt As TextBox
-    Friend WithEvents TelNotxt As TextBox
+    Friend WithEvents KAditxt As TextBox
+    Friend WithEvents Sifretxt As TextBox
     Friend WithEvents AdSoyadtxt As TextBox
     Friend WithEvents Tctxt As TextBox
     Friend WithEvents DataGridView1 As DataGridView
@@ -361,4 +416,8 @@ Partial Class CalisanFormu
     Friend WithEvents Label7 As Label
     Friend WithEvents TcAratxt As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TelNotxt As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents YetkiCombobox As ComboBox
 End Class
