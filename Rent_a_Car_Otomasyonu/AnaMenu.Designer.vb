@@ -25,7 +25,7 @@ Partial Class AnaMenu
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.PersonelButton = New System.Windows.Forms.Button()
         Me.KiralamaButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -41,7 +41,7 @@ Partial Class AnaMenu
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.Controls.Add(Me.Button6, 2, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Button5, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button4, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.PersonelButton, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.KiralamaButton, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Button3, 2, 1)
@@ -82,18 +82,18 @@ Partial Class AnaMenu
         Me.Button5.Text = "Şöför"
         Me.Button5.UseVisualStyleBackColor = False
         '
-        'Button4
+        'PersonelButton
         '
-        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button4.BackColor = System.Drawing.Color.Green
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Rockwell", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(95, 378)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(109, 93)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Çalışan"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.PersonelButton.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PersonelButton.BackColor = System.Drawing.Color.Green
+        Me.PersonelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PersonelButton.Font = New System.Drawing.Font("Rockwell", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PersonelButton.Location = New System.Drawing.Point(95, 378)
+        Me.PersonelButton.Name = "PersonelButton"
+        Me.PersonelButton.Size = New System.Drawing.Size(109, 93)
+        Me.PersonelButton.TabIndex = 3
+        Me.PersonelButton.Text = "Personel"
+        Me.PersonelButton.UseVisualStyleBackColor = False
         '
         'KiralamaButton
         '
@@ -166,7 +166,7 @@ Partial Class AnaMenu
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents PersonelButton As Button
     Friend WithEvents KiralamaButton As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button

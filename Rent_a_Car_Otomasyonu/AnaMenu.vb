@@ -29,7 +29,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub PersonelButton_Click(sender As Object, e As EventArgs) Handles PersonelButton.Click
         PersonelFormu.Show()
         Me.Hide()
     End Sub

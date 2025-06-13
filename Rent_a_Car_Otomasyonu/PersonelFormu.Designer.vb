@@ -217,7 +217,7 @@ Partial Class PersonelFormu
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 49)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
@@ -242,7 +242,7 @@ Partial Class PersonelFormu
         Me.TableLayoutPanel1.Controls.Add(Me.TcAratxt, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 177)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -364,7 +364,6 @@ Partial Class PersonelFormu
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1067, 529)
         Me.Controls.Add(Me.YetkiCombobox)
-        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.GuncelleButton)
         Me.Controls.Add(Me.SilButton)
         Me.Controls.Add(Me.EkleButton)
@@ -383,6 +382,8 @@ Partial Class PersonelFormu
         Me.Controls.Add(Me.AdSoyadtxt)
         Me.Controls.Add(Me.Tctxt)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "PersonelFormu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CalisanFormu"
