@@ -25,8 +25,7 @@ Public Class AracFormu
     End Sub
 
     Private Sub GeriButton_Click(sender As Object, e As EventArgs) Handles GeriButton.Click
-        Dim anamenu As AnaMenu = New AnaMenu()
-        anamenu.Show()
+        AnaMenu.Show()
         Me.Hide()
     End Sub
 

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class MusteriFormu
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class SoforFormu
     Inherits System.Windows.Forms.Form
 
     'Form, bileşen listesini temizlemeyi bırakmayı geçersiz kılar.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,20 +20,19 @@ Partial Class MusteriFormu
     'NOT: Aşağıdaki yordam Windows Form Tasarımcısı için gereklidir
     'Windows Form Tasarımcısı kullanılarak değiştirilebilir.  
     'Kod düzenleyicisini kullanarak değiştirmeyin.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GuncelleButton = New System.Windows.Forms.Button()
         Me.SilButton = New System.Windows.Forms.Button()
         Me.EkleButton = New System.Windows.Forms.Button()
         Me.GeriButton = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Adrestxt = New System.Windows.Forms.TextBox()
         Me.Yastxt = New System.Windows.Forms.TextBox()
-        Me.TelNotxt = New System.Windows.Forms.TextBox()
+        Me.Puantxt = New System.Windows.Forms.TextBox()
         Me.AdSoyadtxt = New System.Windows.Forms.TextBox()
         Me.Tctxt = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -44,6 +43,11 @@ Partial Class MusteriFormu
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TcAratxt = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TelNotxt = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Ucrettxt = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -100,17 +104,6 @@ Partial Class MusteriFormu
         Me.GeriButton.Text = "Geri"
         Me.GeriButton.UseVisualStyleBackColor = False
         '
-        'Label6
-        '
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(9, 397)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(219, 23)
-        Me.Label6.TabIndex = 28
-        Me.Label6.Text = "Müşteri Adres:"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
@@ -119,7 +112,7 @@ Partial Class MusteriFormu
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(219, 23)
         Me.Label3.TabIndex = 27
-        Me.Label3.Text = "Müşteri Tel No:"
+        Me.Label3.Text = "Şoför Puanı:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label4
@@ -130,7 +123,7 @@ Partial Class MusteriFormu
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(219, 23)
         Me.Label4.TabIndex = 26
-        Me.Label4.Text = "Müşteri Yaş:"
+        Me.Label4.Text = "Şoför Yaş:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label2
@@ -141,7 +134,7 @@ Partial Class MusteriFormu
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(219, 23)
         Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Müşteri Ad Soyad:"
+        Me.Label2.Text = "Şoför Ad Soyad:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label1
@@ -152,20 +145,22 @@ Partial Class MusteriFormu
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(219, 23)
         Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Müşteri TC:"
+        Me.Label1.Text = "Şoför TC:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Adrestxt
         '
+        Me.Adrestxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Adrestxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Adrestxt.ForeColor = System.Drawing.Color.Black
-        Me.Adrestxt.Location = New System.Drawing.Point(234, 395)
+        Me.Adrestxt.Location = New System.Drawing.Point(234, 428)
         Me.Adrestxt.Name = "Adrestxt"
         Me.Adrestxt.Size = New System.Drawing.Size(181, 27)
         Me.Adrestxt.TabIndex = 22
         '
         'Yastxt
         '
+        Me.Yastxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Yastxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Yastxt.ForeColor = System.Drawing.Color.Black
         Me.Yastxt.Location = New System.Drawing.Point(234, 329)
@@ -173,18 +168,20 @@ Partial Class MusteriFormu
         Me.Yastxt.Size = New System.Drawing.Size(181, 27)
         Me.Yastxt.TabIndex = 21
         '
-        'TelNotxt
+        'Puantxt
         '
-        Me.TelNotxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.TelNotxt.ForeColor = System.Drawing.Color.Black
-        Me.TelNotxt.Location = New System.Drawing.Point(234, 362)
-        Me.TelNotxt.MaxLength = 11
-        Me.TelNotxt.Name = "TelNotxt"
-        Me.TelNotxt.Size = New System.Drawing.Size(181, 27)
-        Me.TelNotxt.TabIndex = 20
+        Me.Puantxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Puantxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Puantxt.ForeColor = System.Drawing.Color.Black
+        Me.Puantxt.Location = New System.Drawing.Point(234, 362)
+        Me.Puantxt.MaxLength = 11
+        Me.Puantxt.Name = "Puantxt"
+        Me.Puantxt.Size = New System.Drawing.Size(181, 27)
+        Me.Puantxt.TabIndex = 20
         '
         'AdSoyadtxt
         '
+        Me.AdSoyadtxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.AdSoyadtxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.AdSoyadtxt.ForeColor = System.Drawing.Color.Black
         Me.AdSoyadtxt.Location = New System.Drawing.Point(234, 296)
@@ -195,6 +192,7 @@ Partial Class MusteriFormu
         '
         'Tctxt
         '
+        Me.Tctxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tctxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Tctxt.ForeColor = System.Drawing.Color.Black
         Me.Tctxt.Location = New System.Drawing.Point(234, 263)
@@ -259,7 +257,7 @@ Partial Class MusteriFormu
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(171, 23)
         Me.Label8.TabIndex = 29
-        Me.Label8.Text = "Müşteri Tel No:"
+        Me.Label8.Text = "Şoför Tel No:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'AdSoyadAratxt
@@ -281,7 +279,7 @@ Partial Class MusteriFormu
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(171, 23)
         Me.Label7.TabIndex = 27
-        Me.Label7.Text = "Müşteri Ad Soyad:"
+        Me.Label7.Text = "Şoför Ad Soyad:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TcAratxt
@@ -303,10 +301,63 @@ Partial Class MusteriFormu
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(171, 23)
         Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Müşteri TC:"
+        Me.Label5.Text = "Şoför TC:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'MusteriFormu
+        'Label9
+        '
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(9, 432)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(219, 23)
+        Me.Label9.TabIndex = 28
+        Me.Label9.Text = "Personel Adres:"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TelNotxt
+        '
+        Me.TelNotxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TelNotxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.TelNotxt.ForeColor = System.Drawing.Color.Black
+        Me.TelNotxt.Location = New System.Drawing.Point(234, 395)
+        Me.TelNotxt.Name = "TelNotxt"
+        Me.TelNotxt.Size = New System.Drawing.Size(181, 27)
+        Me.TelNotxt.TabIndex = 22
+        '
+        'Label10
+        '
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(9, 399)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(219, 23)
+        Me.Label10.TabIndex = 28
+        Me.Label10.Text = "Personel Tel No:"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Ucrettxt
+        '
+        Me.Ucrettxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.Ucrettxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Ucrettxt.ForeColor = System.Drawing.Color.Black
+        Me.Ucrettxt.Location = New System.Drawing.Point(234, 461)
+        Me.Ucrettxt.Name = "Ucrettxt"
+        Me.Ucrettxt.Size = New System.Drawing.Size(181, 27)
+        Me.Ucrettxt.TabIndex = 22
+        '
+        'Label6
+        '
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(9, 465)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(219, 23)
+        Me.Label6.TabIndex = 28
+        Me.Label6.Text = "Personel Ücret:"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'SoforFormu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -316,22 +367,26 @@ Partial Class MusteriFormu
         Me.Controls.Add(Me.SilButton)
         Me.Controls.Add(Me.EkleButton)
         Me.Controls.Add(Me.GeriButton)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TelNotxt)
+        Me.Controls.Add(Me.Ucrettxt)
         Me.Controls.Add(Me.Adrestxt)
         Me.Controls.Add(Me.Yastxt)
-        Me.Controls.Add(Me.TelNotxt)
+        Me.Controls.Add(Me.Puantxt)
         Me.Controls.Add(Me.AdSoyadtxt)
         Me.Controls.Add(Me.Tctxt)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "MusteriFormu"
+        Me.Name = "SoforFormu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MusteriFormu"
+        Me.Text = "SoforFormu"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
@@ -344,14 +399,13 @@ Partial Class MusteriFormu
     Friend WithEvents SilButton As Button
     Friend WithEvents EkleButton As Button
     Friend WithEvents GeriButton As Button
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Adrestxt As TextBox
     Friend WithEvents Yastxt As TextBox
-    Friend WithEvents TelNotxt As TextBox
+    Friend WithEvents Puantxt As TextBox
     Friend WithEvents AdSoyadtxt As TextBox
     Friend WithEvents Tctxt As TextBox
     Friend WithEvents DataGridView1 As DataGridView
@@ -362,4 +416,9 @@ Partial Class MusteriFormu
     Friend WithEvents Label7 As Label
     Friend WithEvents TcAratxt As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TelNotxt As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Ucrettxt As TextBox
+    Friend WithEvents Label6 As Label
 End Class

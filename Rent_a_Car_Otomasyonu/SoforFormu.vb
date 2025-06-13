@@ -1,66 +1,38 @@
 ﻿Imports System.Data.OleDb
 
-Public Class PersonelFormu
+Public Class SoforFormu
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Tctxt.Text = DataGridView1.SelectedRows(0).Cells(0).Value.ToString()
         AdSoyadtxt.Text = DataGridView1.SelectedRows(0).Cells(1).Value.ToString()
-        TelNotxt.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString()
-        KAditxt.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString()
-        Sifretxt.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString()
-        YetkiCombobox.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString()
-        Adrestxt.Text = DataGridView1.SelectedRows(0).Cells(6).Value.ToString()
+        Yastxt.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString()
+        Puantxt.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString()
+        TelNotxt.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString()
+        Adrestxt.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString()
+        Ucrettxt.Text = DataGridView1.SelectedRows(0).Cells(6).Value.ToString()
     End Sub
 
     Private Sub EkleButton_Click(sender As Object, e As EventArgs) Handles EkleButton.Click
         Try
-            If Tctxt.Text = Nothing Or Tctxt.Text = String.Empty Or Tctxt.Text.Length < 11 Then
-                MsgBox("Personel TC'si boş bırakılamaz ve 11 haneden küçük olamaz")
+            REM eğerki gelen değer true değilse ekle butonu çalışmayacak
+            If Not TextboxKontrol() Then
                 Return
             End If
 
-            If AdSoyadtxt.Text = Nothing Or AdSoyadtxt.Text = String.Empty Then
-                MsgBox("Personel Adı ve soyadı boş bırakılamaz")
-                Return
-            End If
-
-            If TelNotxt.Text = Nothing Or TelNotxt.Text = String.Empty Then
-                MsgBox("Personel Telefon Numarası boş bırakılamaz")
-                Return
-            End If
-
-            If Adrestxt.Text = Nothing Or Adrestxt.Text = String.Empty Then
-                MsgBox("Personel Adresi boş bırakılamaz")
-                Return
-            End If
+            REM True ise çalışacak
 
             Dim baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source='Veritabani/Rent_a_Car_Veritabani.mdb'") 'Veritabanımızın yerini belirtiyoruz.
             baglanti.Open()
 
-            Dim eklekomutu As String = "insert into Personel_ve_Kullanici_Tablosu values(@TC,@AdSoyad,@Telno,@Kadi,@Sifre,@Yetki,@Adres)"
+            Dim eklekomutu As String = "insert into Sofor_Tablosu values (@TC,@AdSoyad, @Yas, @Puan, @Telno, @Adres, @Ucret)"
             Dim cmd As OleDbCommand = New OleDbCommand(eklekomutu, baglanti)
 
             cmd.Parameters.AddWithValue("@TC", Tctxt.Text.Trim())
             cmd.Parameters.AddWithValue("@AdSoyad", AdSoyadtxt.Text.Trim())
+            cmd.Parameters.AddWithValue("@Yas", Yastxt.Text.Trim())
+            cmd.Parameters.AddWithValue("@Puan", Puantxt.Text.Trim())
             cmd.Parameters.AddWithValue("@Telno", TelNotxt.Text.Trim())
-
-            If KAditxt.Text IsNot String.Empty And KAditxt.Text IsNot Nothing Then
-                cmd.Parameters.AddWithValue("@Kadi", KAditxt.Text.Trim())
-
-                If Sifretxt.Text IsNot String.Empty And Sifretxt.Text IsNot Nothing And Sifretxt.TextLength >= 6 Then
-                    cmd.Parameters.AddWithValue("@Sifre", Sifretxt.Text.Trim())
-                Else
-                    MsgBox("Şifre boş veya 6 karakterden küçük olamaz")
-                    Return
-                End If
-
-                cmd.Parameters.AddWithValue("@Yetki", YetkiCombobox.Text.Trim())
-            Else
-                cmd.Parameters.AddWithValue("@Kadi", String.Empty)
-                cmd.Parameters.AddWithValue("@Sifre", String.Empty)
-                cmd.Parameters.AddWithValue("@Yetki", String.Empty)
-            End If
-
             cmd.Parameters.AddWithValue("@Adres", Adrestxt.Text.Trim())
+            cmd.Parameters.AddWithValue("@Ucret", Ucrettxt.Text.Trim())
 
             Dim obj As Integer = cmd.ExecuteNonQuery()
             If obj > 0 Then
@@ -77,7 +49,7 @@ Public Class PersonelFormu
 
     Private Sub Listele(tc As String, ad As String, telno As String)
         Dim baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source='Veritabani/Rent_a_Car_Veritabani.mdb'") 'Veritabanımızın yerini belirtiyoruz.
-        Dim selectkomutu As String = "select * from Personel_ve_Kullanici_Tablosu where Personel_TC Like @tc and Personel_Ad_Soyad like @adsoyad and Personel_Tel_No like @telno"
+        Dim selectkomutu As String = "select * from Sofor_Tablosu where Sofor_TC Like @tc and Sofor_Ad_Soyad like @adsoyad and Sofor_Telefon_No like @telno"
         Dim veriler As New DataTable()
         Dim adapter As New OleDbDataAdapter(selectkomutu, baglanti)
         adapter.SelectCommand.Parameters.AddWithValue("@tc", "%" + tc + "%")
@@ -89,33 +61,23 @@ Public Class PersonelFormu
 
     Private Sub GuncelleButton_Click(sender As Object, e As EventArgs) Handles GuncelleButton.Click
         Try
+            REM eğerki gelen değer true değilse buton çalışmayacak
+            If Not TextboxKontrol() Then
+                Return
+            End If
+            REM True ise çalışacak
+
             Dim baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source='Veritabani/Rent_a_Car_Veritabani.mdb'") 'Veritabanımızın yerini belirtiyoruz.
             baglanti.Open()
-            Dim eklekomutu As String = "Update Personel_ve_Kullanici_Tablosu set Personel_Ad_Soyad=@AdSoyad, Personel_Tel_No=@Telno, Personel_Kullanici_Adi=@Kadi, Personel_Sifre=@Sifre, Personel_Yetki=@Yetki, Personel_Adres=Adres where Personel_TC=@TC"
+            Dim eklekomutu As String = "Update Sofor_Tablosu set Sofor_Ad_Soyad=@AdSoyad, Sofor_Yas = @Yas, Sofor_Puani=@Puan, Sofor_Telefon_No=@Telno, Sofor_Adres=@Adres, Sofor_Ucreti=@Ucret where Sofor_TC=@TC"
             Dim cmd As OleDbCommand = New OleDbCommand(eklekomutu, baglanti)
 
-
             cmd.Parameters.AddWithValue("@AdSoyad", AdSoyadtxt.Text.Trim())
+            cmd.Parameters.AddWithValue("@Yas", Yastxt.Text.Trim())
+            cmd.Parameters.AddWithValue("@Puan", Puantxt.Text.Trim())
             cmd.Parameters.AddWithValue("@Telno", TelNotxt.Text.Trim())
-
-            If KAditxt.Text IsNot String.Empty And KAditxt.Text IsNot Nothing Then
-                cmd.Parameters.AddWithValue("@Kadi", KAditxt.Text.Trim())
-
-                If Sifretxt.Text IsNot String.Empty And Sifretxt.Text IsNot Nothing And Sifretxt.TextLength >= 6 Then
-                    cmd.Parameters.AddWithValue("@Sifre", Sifretxt.Text.Trim())
-                Else
-                    MsgBox("Şifre boş veya 6 karakterden küçük olamaz")
-                    Return
-                End If
-
-                cmd.Parameters.AddWithValue("@Yetki", YetkiCombobox.Text.Trim())
-            Else
-                cmd.Parameters.AddWithValue("@Kadi", String.Empty)
-                cmd.Parameters.AddWithValue("@Sifre", String.Empty)
-                cmd.Parameters.AddWithValue("@Yetki", String.Empty)
-            End If
-
             cmd.Parameters.AddWithValue("@Adres", Adrestxt.Text.Trim())
+            cmd.Parameters.AddWithValue("@Ucret", Ucrettxt.Text.Trim())
             cmd.Parameters.AddWithValue("@TC", Tctxt.Text.Trim())
 
             Dim obj As Integer = cmd.ExecuteNonQuery()
@@ -134,15 +96,15 @@ Public Class PersonelFormu
     Private Sub SilButton_Click(sender As Object, e As EventArgs) Handles SilButton.Click
         Try
             If Tctxt.Text = Nothing Or Tctxt.Text = String.Empty Or Tctxt.Text.Length < 11 Then
-                MsgBox("Personel TC'si boş bırakılamaz ve 11 haneden küçük olamaz")
+                MsgBox("Şoför TC'si boş bırakılamaz ve 11 haneden küçük olamaz")
                 Return
             End If
 
-            If MsgBox("Personeli Silmek İstediğinizden Emin misiniz?", vbYesNo + vbQuestion, "Bilgiler Siliniyor") = DialogResult.Yes Then
+            If MsgBox("Şoförü Silmek İstediğinizden Emin misiniz?", vbYesNo + vbQuestion, "Bilgiler Siliniyor") = DialogResult.Yes Then
 
                 Dim baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source='Veritabani/Rent_a_Car_Veritabani.mdb'") 'Veritabanımızın yerini belirtiyoruz.
                 baglanti.Open()
-                Dim eklekomutu As String = "Delete from Personel_ve_Kullanici_Tablosu where Personel_TC=@TC"
+                Dim eklekomutu As String = "Delete from Sofor_Tablosu where Sofor_TC=@TC"
                 Dim cmd As OleDbCommand = New OleDbCommand(eklekomutu, baglanti)
 
                 cmd.Parameters.AddWithValue("@TC", Tctxt.Text.Trim())
@@ -166,19 +128,18 @@ Public Class PersonelFormu
 
     Private Sub GeriButton_Click(sender As Object, e As EventArgs) Handles GeriButton.Click
         If ReferanceClass.yetki = "ADMİN" Then
-            AnaMenu.Show()
+            Dim anamenu As AnaMenu = New AnaMenu()
+            anamenu.Show()
             Me.Hide()
         Else
-            UserAnaMenu.Show()
+            Dim uanamenu As UserAnaMenu = New UserAnaMenu()
+            uanamenu.Show()
             Me.Hide()
         End If
 
     End Sub
 
-    Private Sub CalisanFormu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Sifretxt.Enabled = False
-        YetkiCombobox.Enabled = False
-        YetkiCombobox.SelectedIndex = 0
+    Private Sub SoforFormu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
     End Sub
 
@@ -213,25 +174,10 @@ Public Class PersonelFormu
         End If
     End Sub
 
-    Private Sub CalisanFormu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+    Private Sub SoforFormu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
     End Sub
 
-    Private Sub KAditxt_TextChanged(sender As Object, e As EventArgs) Handles KAditxt.TextChanged
-
-        If KAditxt.Text.StartsWith(" ") Then
-            KAditxt.Text = KAditxt.Text.Substring(1)
-        End If
-
-        If KAditxt.Text = Nothing Or KAditxt.Text = String.Empty Then
-            Sifretxt.Enabled = False
-            Sifretxt.Text = ""
-            YetkiCombobox.Enabled = False
-        Else
-            Sifretxt.Enabled = True
-            YetkiCombobox.Enabled = True
-        End If
-    End Sub
 
     Private Sub TelNotxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TelNotxt.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
@@ -251,15 +197,61 @@ Public Class PersonelFormu
         End If
     End Sub
 
-    Private Sub Sifretxt_TextChanged(sender As Object, e As EventArgs) Handles Sifretxt.TextChanged
-        If Sifretxt.Text.StartsWith(" ") Then
-            Sifretxt.Text = Sifretxt.Text.Substring(1)
+    Private Sub Sifretxt_TextChanged(sender As Object, e As EventArgs) Handles Puantxt.TextChanged
+        If Puantxt.Text.StartsWith(" ") Then
+            Puantxt.Text = Puantxt.Text.Substring(1)
         End If
     End Sub
 
-    Private Sub Adrestxt_TextChanged(sender As Object, e As EventArgs) Handles Adrestxt.TextChanged
-        If Adrestxt.Text.StartsWith(" ") Then
-            Adrestxt.Text = Adrestxt.Text.Substring(1)
+
+    Private Sub Yastxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Yastxt.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Function TextboxKontrol() As Boolean
+        If Tctxt.Text = Nothing Or Tctxt.Text = String.Empty Or Tctxt.Text.Length < 11 Then
+            MsgBox("Şoför TC'si boş bırakılamaz ve 11 haneden küçük olamaz")
+            Return False
+        End If
+
+        If AdSoyadtxt.Text = Nothing Or AdSoyadtxt.Text = String.Empty Then
+            MsgBox("Şoför Adı ve soyadı boş bırakılamaz")
+            Return False
+        End If
+
+        If Yastxt.Text = Nothing Or Yastxt.Text = String.Empty Then
+            MsgBox("Şoförün Yaşı boş bırakılamaz")
+            Return False
+        End If
+
+        If Puantxt.Text = Nothing Or Puantxt.Text = String.Empty Then
+            MsgBox("Şoför Puanı boş bırakılamaz")
+            Return False
+        End If
+
+        If TelNotxt.Text = Nothing Or TelNotxt.Text = String.Empty Then
+            MsgBox("Şoför Telefon Numarası boş bırakılamaz")
+            Return False
+        End If
+
+        If Adrestxt.Text = Nothing Or Adrestxt.Text = String.Empty Then
+            MsgBox("Şoför Adresi boş bırakılamaz")
+            Return False
+        End If
+
+        If Ucrettxt.Text = Nothing Or Ucrettxt.Text = String.Empty Then
+            MsgBox("Şoför Ücreti boş bırakılamaz")
+            Return False
+        End If
+
+        Return True
+    End Function
+
+    Private Sub Ucrettxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Ucrettxt.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
         End If
     End Sub
 End Class

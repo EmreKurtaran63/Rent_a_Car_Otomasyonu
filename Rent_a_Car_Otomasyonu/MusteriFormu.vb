@@ -95,13 +95,11 @@ Public Class MusteriFormu
     End Sub
 
     Private Sub GeriButton_Click(sender As Object, e As EventArgs) Handles GeriButton.Click
-        If ReferanceClass.yetki = "admin" Then
-            Dim anamenu As AnaMenu = New AnaMenu()
-            anamenu.Show()
+        If ReferanceClass.yetki = "ADMİN" Then
+            AnaMenu.Show()
             Me.Hide()
         Else
-            Dim uanamenu As UserAnaMenu = New UserAnaMenu()
-            uanamenu.Show()
+            UserAnaMenu.Show()
             Me.Hide()
         End If
 
