@@ -190,6 +190,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Rent_a_Car_Otomasyonu.exe.config" />
+    <None Include="bin\Debug\Resimler\customer.png" />
+    <None Include="bin\Debug\Resimler\PASWORD.png" />
+    <None Include="bin\Debug\Resimler\yan1.png" />
+    <None Include="bin\Debug\Resimler\yan2.png" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -206,10 +210,6 @@
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.exe" />
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.pdb" />
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.xml" />
-    <None Include="bin\Debug\Resimler\PASWORD.png" />
-    <None Include="bin\Debug\Resimler\customer.png" />
-    <None Include="bin\Debug\Resimler\yan1.png" />
-    <None Include="bin\Debug\Resimler\yan2.png" />
     <Content Include="bin\Debug\Veritabani\Rent_a_Car_Veritabani.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
