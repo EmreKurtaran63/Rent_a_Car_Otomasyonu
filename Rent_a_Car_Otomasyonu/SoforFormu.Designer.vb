@@ -48,8 +48,12 @@ Partial Class SoforFormu
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Ucrettxt = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GuncelleButton
@@ -58,7 +62,7 @@ Partial Class SoforFormu
         Me.GuncelleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GuncelleButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.GuncelleButton.ForeColor = System.Drawing.Color.Black
-        Me.GuncelleButton.Location = New System.Drawing.Point(543, 377)
+        Me.GuncelleButton.Location = New System.Drawing.Point(554, 140)
         Me.GuncelleButton.Name = "GuncelleButton"
         Me.GuncelleButton.Size = New System.Drawing.Size(162, 78)
         Me.GuncelleButton.TabIndex = 33
@@ -71,7 +75,7 @@ Partial Class SoforFormu
         Me.SilButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SilButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.SilButton.ForeColor = System.Drawing.Color.Black
-        Me.SilButton.Location = New System.Drawing.Point(741, 377)
+        Me.SilButton.Location = New System.Drawing.Point(752, 140)
         Me.SilButton.Name = "SilButton"
         Me.SilButton.Size = New System.Drawing.Size(162, 78)
         Me.SilButton.TabIndex = 32
@@ -84,7 +88,7 @@ Partial Class SoforFormu
         Me.EkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.EkleButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.EkleButton.ForeColor = System.Drawing.Color.Black
-        Me.EkleButton.Location = New System.Drawing.Point(543, 263)
+        Me.EkleButton.Location = New System.Drawing.Point(554, 26)
         Me.EkleButton.Name = "EkleButton"
         Me.EkleButton.Size = New System.Drawing.Size(162, 78)
         Me.EkleButton.TabIndex = 31
@@ -97,7 +101,7 @@ Partial Class SoforFormu
         Me.GeriButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GeriButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.GeriButton.ForeColor = System.Drawing.Color.Black
-        Me.GeriButton.Location = New System.Drawing.Point(741, 263)
+        Me.GeriButton.Location = New System.Drawing.Point(752, 26)
         Me.GeriButton.Name = "GeriButton"
         Me.GeriButton.Size = New System.Drawing.Size(162, 78)
         Me.GeriButton.TabIndex = 30
@@ -108,7 +112,7 @@ Partial Class SoforFormu
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(9, 364)
+        Me.Label3.Location = New System.Drawing.Point(20, 127)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(219, 23)
         Me.Label3.TabIndex = 27
@@ -119,7 +123,7 @@ Partial Class SoforFormu
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(9, 331)
+        Me.Label4.Location = New System.Drawing.Point(20, 94)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(219, 23)
         Me.Label4.TabIndex = 26
@@ -130,7 +134,7 @@ Partial Class SoforFormu
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(9, 298)
+        Me.Label2.Location = New System.Drawing.Point(20, 61)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(219, 23)
         Me.Label2.TabIndex = 25
@@ -141,7 +145,7 @@ Partial Class SoforFormu
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(9, 265)
+        Me.Label1.Location = New System.Drawing.Point(20, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(219, 23)
         Me.Label1.TabIndex = 24
@@ -153,7 +157,7 @@ Partial Class SoforFormu
         Me.Adrestxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Adrestxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Adrestxt.ForeColor = System.Drawing.Color.Black
-        Me.Adrestxt.Location = New System.Drawing.Point(234, 428)
+        Me.Adrestxt.Location = New System.Drawing.Point(245, 191)
         Me.Adrestxt.Name = "Adrestxt"
         Me.Adrestxt.Size = New System.Drawing.Size(181, 27)
         Me.Adrestxt.TabIndex = 22
@@ -163,7 +167,8 @@ Partial Class SoforFormu
         Me.Yastxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Yastxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Yastxt.ForeColor = System.Drawing.Color.Black
-        Me.Yastxt.Location = New System.Drawing.Point(234, 329)
+        Me.Yastxt.Location = New System.Drawing.Point(245, 92)
+        Me.Yastxt.MaxLength = 3
         Me.Yastxt.Name = "Yastxt"
         Me.Yastxt.Size = New System.Drawing.Size(181, 27)
         Me.Yastxt.TabIndex = 21
@@ -173,7 +178,7 @@ Partial Class SoforFormu
         Me.Puantxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Puantxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Puantxt.ForeColor = System.Drawing.Color.Black
-        Me.Puantxt.Location = New System.Drawing.Point(234, 362)
+        Me.Puantxt.Location = New System.Drawing.Point(245, 125)
         Me.Puantxt.MaxLength = 11
         Me.Puantxt.Name = "Puantxt"
         Me.Puantxt.Size = New System.Drawing.Size(181, 27)
@@ -184,7 +189,7 @@ Partial Class SoforFormu
         Me.AdSoyadtxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.AdSoyadtxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.AdSoyadtxt.ForeColor = System.Drawing.Color.Black
-        Me.AdSoyadtxt.Location = New System.Drawing.Point(234, 296)
+        Me.AdSoyadtxt.Location = New System.Drawing.Point(245, 59)
         Me.AdSoyadtxt.MaxLength = 20
         Me.AdSoyadtxt.Name = "AdSoyadtxt"
         Me.AdSoyadtxt.Size = New System.Drawing.Size(181, 27)
@@ -195,7 +200,7 @@ Partial Class SoforFormu
         Me.Tctxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Tctxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Tctxt.ForeColor = System.Drawing.Color.Black
-        Me.Tctxt.Location = New System.Drawing.Point(234, 263)
+        Me.Tctxt.Location = New System.Drawing.Point(245, 26)
         Me.Tctxt.MaxLength = 11
         Me.Tctxt.Name = "Tctxt"
         Me.Tctxt.Size = New System.Drawing.Size(181, 27)
@@ -244,6 +249,7 @@ Partial Class SoforFormu
         Me.TelNoAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.TelNoAratxt.ForeColor = System.Drawing.Color.Black
         Me.TelNoAratxt.Location = New System.Drawing.Point(888, 11)
+        Me.TelNoAratxt.MaxLength = 10
         Me.TelNoAratxt.Name = "TelNoAratxt"
         Me.TelNoAratxt.Size = New System.Drawing.Size(171, 27)
         Me.TelNoAratxt.TabIndex = 30
@@ -288,6 +294,7 @@ Partial Class SoforFormu
         Me.TcAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.TcAratxt.ForeColor = System.Drawing.Color.Black
         Me.TcAratxt.Location = New System.Drawing.Point(180, 11)
+        Me.TcAratxt.MaxLength = 11
         Me.TcAratxt.Name = "TcAratxt"
         Me.TcAratxt.Size = New System.Drawing.Size(171, 27)
         Me.TcAratxt.TabIndex = 26
@@ -308,7 +315,7 @@ Partial Class SoforFormu
         '
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(9, 432)
+        Me.Label9.Location = New System.Drawing.Point(20, 195)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(219, 23)
         Me.Label9.TabIndex = 28
@@ -320,7 +327,8 @@ Partial Class SoforFormu
         Me.TelNotxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TelNotxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.TelNotxt.ForeColor = System.Drawing.Color.Black
-        Me.TelNotxt.Location = New System.Drawing.Point(234, 395)
+        Me.TelNotxt.Location = New System.Drawing.Point(245, 158)
+        Me.TelNotxt.MaxLength = 10
         Me.TelNotxt.Name = "TelNotxt"
         Me.TelNotxt.Size = New System.Drawing.Size(181, 27)
         Me.TelNotxt.TabIndex = 22
@@ -329,7 +337,7 @@ Partial Class SoforFormu
         '
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(9, 399)
+        Me.Label10.Location = New System.Drawing.Point(20, 162)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(219, 23)
         Me.Label10.TabIndex = 28
@@ -341,7 +349,7 @@ Partial Class SoforFormu
         Me.Ucrettxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Ucrettxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Ucrettxt.ForeColor = System.Drawing.Color.Black
-        Me.Ucrettxt.Location = New System.Drawing.Point(234, 461)
+        Me.Ucrettxt.Location = New System.Drawing.Point(245, 224)
         Me.Ucrettxt.Name = "Ucrettxt"
         Me.Ucrettxt.Size = New System.Drawing.Size(181, 27)
         Me.Ucrettxt.TabIndex = 22
@@ -350,12 +358,51 @@ Partial Class SoforFormu
         '
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(9, 465)
+        Me.Label6.Location = New System.Drawing.Point(20, 228)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(219, 23)
         Me.Label6.TabIndex = 28
         Me.Label6.Text = "Personel Ücret:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 1
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Panel1, 0, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 226)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1067, 303)
+        Me.TableLayoutPanel2.TabIndex = 35
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel1.Controls.Add(Me.EkleButton)
+        Me.Panel1.Controls.Add(Me.GuncelleButton)
+        Me.Panel1.Controls.Add(Me.Tctxt)
+        Me.Panel1.Controls.Add(Me.SilButton)
+        Me.Panel1.Controls.Add(Me.AdSoyadtxt)
+        Me.Panel1.Controls.Add(Me.Puantxt)
+        Me.Panel1.Controls.Add(Me.GeriButton)
+        Me.Panel1.Controls.Add(Me.Yastxt)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Adrestxt)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Ucrettxt)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.TelNotxt)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Location = New System.Drawing.Point(39, 13)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(988, 276)
+        Me.Panel1.TabIndex = 36
         '
         'SoforFormu
         '
@@ -363,24 +410,7 @@ Partial Class SoforFormu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1067, 529)
-        Me.Controls.Add(Me.GuncelleButton)
-        Me.Controls.Add(Me.SilButton)
-        Me.Controls.Add(Me.EkleButton)
-        Me.Controls.Add(Me.GeriButton)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TelNotxt)
-        Me.Controls.Add(Me.Ucrettxt)
-        Me.Controls.Add(Me.Adrestxt)
-        Me.Controls.Add(Me.Yastxt)
-        Me.Controls.Add(Me.Puantxt)
-        Me.Controls.Add(Me.AdSoyadtxt)
-        Me.Controls.Add(Me.Tctxt)
+        Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -390,8 +420,10 @@ Partial Class SoforFormu
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -421,4 +453,6 @@ Partial Class SoforFormu
     Friend WithEvents Label10 As Label
     Friend WithEvents Ucrettxt As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents Panel1 As Panel
 End Class

@@ -26,6 +26,7 @@ Partial Class UserAnaMenu
         Me.KiralamaButton = New System.Windows.Forms.Button()
         Me.MusteriButton = New System.Windows.Forms.Button()
         Me.SoforButton = New System.Windows.Forms.Button()
+        Me.GuvenliCikisButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -33,16 +34,18 @@ Partial Class UserAnaMenu
         '
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Controls.Add(Me.KiralamaButton, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.MusteriButton, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.SoforButton, 0, 0)
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel1.Controls.Add(Me.KiralamaButton, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.MusteriButton, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.SoforButton, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.GuvenliCikisButton, 2, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(800, 450)
         Me.TableLayoutPanel1.TabIndex = 1
         '
@@ -52,7 +55,7 @@ Partial Class UserAnaMenu
         Me.KiralamaButton.BackColor = System.Drawing.Color.Green
         Me.KiralamaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.KiralamaButton.Font = New System.Drawing.Font("Rockwell", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.KiralamaButton.Location = New System.Drawing.Point(344, 178)
+        Me.KiralamaButton.Location = New System.Drawing.Point(344, 201)
         Me.KiralamaButton.Name = "KiralamaButton"
         Me.KiralamaButton.Size = New System.Drawing.Size(109, 93)
         Me.KiralamaButton.TabIndex = 1
@@ -65,7 +68,7 @@ Partial Class UserAnaMenu
         Me.MusteriButton.BackColor = System.Drawing.Color.Green
         Me.MusteriButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.MusteriButton.Font = New System.Drawing.Font("Rockwell", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MusteriButton.Location = New System.Drawing.Point(611, 178)
+        Me.MusteriButton.Location = New System.Drawing.Point(611, 201)
         Me.MusteriButton.Name = "MusteriButton"
         Me.MusteriButton.Size = New System.Drawing.Size(109, 93)
         Me.MusteriButton.TabIndex = 2
@@ -78,12 +81,25 @@ Partial Class UserAnaMenu
         Me.SoforButton.BackColor = System.Drawing.Color.Green
         Me.SoforButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SoforButton.Font = New System.Drawing.Font("Rockwell", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SoforButton.Location = New System.Drawing.Point(78, 178)
+        Me.SoforButton.Location = New System.Drawing.Point(78, 201)
         Me.SoforButton.Name = "SoforButton"
         Me.SoforButton.Size = New System.Drawing.Size(109, 93)
         Me.SoforButton.TabIndex = 4
         Me.SoforButton.Text = "Şöför"
         Me.SoforButton.UseVisualStyleBackColor = False
+        '
+        'GuvenliCikisButton
+        '
+        Me.GuvenliCikisButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GuvenliCikisButton.BackColor = System.Drawing.Color.Green
+        Me.GuvenliCikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GuvenliCikisButton.Font = New System.Drawing.Font("Rockwell", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GuvenliCikisButton.Location = New System.Drawing.Point(621, 3)
+        Me.GuvenliCikisButton.Name = "GuvenliCikisButton"
+        Me.GuvenliCikisButton.Size = New System.Drawing.Size(176, 39)
+        Me.GuvenliCikisButton.TabIndex = 7
+        Me.GuvenliCikisButton.Text = "Güvenli Çıkış"
+        Me.GuvenliCikisButton.UseVisualStyleBackColor = False
         '
         'UserAnaMenu
         '
@@ -92,6 +108,7 @@ Partial Class UserAnaMenu
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(14, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "UserAnaMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UserAnaMenu"
@@ -104,4 +121,5 @@ Partial Class UserAnaMenu
     Friend WithEvents KiralamaButton As Button
     Friend WithEvents MusteriButton As Button
     Friend WithEvents SoforButton As Button
+    Friend WithEvents GuvenliCikisButton As Button
 End Class

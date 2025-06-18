@@ -148,6 +148,8 @@ Public Class SoforFormu
     End Sub
 
     Private Sub AdSoyadAratxt_TextChanged(sender As Object, e As EventArgs) Handles AdSoyadAratxt.TextChanged
+
+
         Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
     End Sub
 
@@ -186,20 +188,10 @@ Public Class SoforFormu
     End Sub
 
     Private Sub AdSoyadtxt_TextChanged(sender As Object, e As EventArgs) Handles AdSoyadtxt.TextChanged
+
+
         If AdSoyadtxt.Text.StartsWith(" ") Then
             AdSoyadtxt.Text = AdSoyadtxt.Text.Substring(1)
-        End If
-    End Sub
-
-    Private Sub TelNotxt_TextChanged(sender As Object, e As EventArgs) Handles TelNotxt.TextChanged
-        If TelNotxt.Text.StartsWith(" ") Then
-            TelNotxt.Text = TelNotxt.Text.Substring(1)
-        End If
-    End Sub
-
-    Private Sub Sifretxt_TextChanged(sender As Object, e As EventArgs) Handles Puantxt.TextChanged
-        If Puantxt.Text.StartsWith(" ") Then
-            Puantxt.Text = Puantxt.Text.Substring(1)
         End If
     End Sub
 
@@ -251,6 +243,34 @@ Public Class SoforFormu
 
     Private Sub Ucrettxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Ucrettxt.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub AdSoyadtxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles AdSoyadtxt.KeyPress
+        If Char.IsDigit(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub Puantxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Puantxt.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub Adrestxt_TextChanged(sender As Object, e As EventArgs) Handles Adrestxt.TextChanged
+        If Adrestxt.Text.StartsWith(" ") Then
+            Adrestxt.Text = Adrestxt.Text.Substring(1)
+        End If
+    End Sub
+
+    Private Sub AdSoyadAratxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles AdSoyadAratxt.KeyPress
+        If Char.IsDigit(e.KeyChar) Then
+            e.Handled = True
+        End If
+
+        If Char.IsWhiteSpace(e.KeyChar) And AdSoyadAratxt.Text.Length < 1 Then
             e.Handled = True
         End If
     End Sub

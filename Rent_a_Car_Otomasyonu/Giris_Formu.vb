@@ -109,6 +109,12 @@ Public Class Giris_Formu
     End Sub
 
     Private Sub GuvenliCikisButton_Click(sender As Object, e As EventArgs) Handles GuvenliCikisButton.Click
-        Application.Exit()
+        If MsgBox("Çıkmak istediğinizden emin misiniz?", vbYesNo + vbQuestion, "Çıkış Yapılıyor") = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub HakkimizdaBtn_Click(sender As Object, e As EventArgs) Handles HakkimizdaBtn.Click
+        HakkimizdaFormu.ShowDialog()
     End Sub
 End Class

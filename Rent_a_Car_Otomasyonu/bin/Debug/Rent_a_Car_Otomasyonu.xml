@@ -32,6 +32,11 @@ Rent_a_Car_Otomasyonu
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Rent_a_Car_Otomasyonu.My.Resources.Resources.Wizard">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Rent_a_Car_Otomasyonu.My.Resources.Resources.yan1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
