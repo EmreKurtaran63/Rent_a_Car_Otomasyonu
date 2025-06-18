@@ -37,6 +37,7 @@ Partial Class SoforFormu
         Me.Tctxt = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Cikis = New System.Windows.Forms.Button()
         Me.TelNoAratxt = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.AdSoyadAratxt = New System.Windows.Forms.TextBox()
@@ -222,13 +223,15 @@ Partial Class SoforFormu
         '
         'TableLayoutPanel1
         '
-        Me.TableLayoutPanel1.ColumnCount = 6
+        Me.TableLayoutPanel1.ColumnCount = 7
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66736!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66736!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66736!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66736!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66736!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66319!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Cikis, 6, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TelNoAratxt, 5, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label8, 4, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.AdSoyadAratxt, 3, 0)
@@ -243,15 +246,29 @@ Partial Class SoforFormu
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1067, 49)
         Me.TableLayoutPanel1.TabIndex = 34
         '
+        'Cikis
+        '
+        Me.Cikis.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Cikis.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Cikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cikis.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Cikis.ForeColor = System.Drawing.Color.White
+        Me.Cikis.Location = New System.Drawing.Point(966, 8)
+        Me.Cikis.Name = "Cikis"
+        Me.Cikis.Size = New System.Drawing.Size(87, 33)
+        Me.Cikis.TabIndex = 31
+        Me.Cikis.Text = "X"
+        Me.Cikis.UseVisualStyleBackColor = False
+        '
         'TelNoAratxt
         '
         Me.TelNoAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.TelNoAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.TelNoAratxt.ForeColor = System.Drawing.Color.Black
-        Me.TelNoAratxt.Location = New System.Drawing.Point(888, 11)
+        Me.TelNoAratxt.Location = New System.Drawing.Point(798, 11)
         Me.TelNoAratxt.MaxLength = 10
         Me.TelNoAratxt.Name = "TelNoAratxt"
-        Me.TelNoAratxt.Size = New System.Drawing.Size(171, 27)
+        Me.TelNoAratxt.Size = New System.Drawing.Size(152, 27)
         Me.TelNoAratxt.TabIndex = 30
         '
         'Label8
@@ -259,9 +276,9 @@ Partial Class SoforFormu
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(711, 13)
+        Me.Label8.Location = New System.Drawing.Point(639, 13)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(171, 23)
+        Me.Label8.Size = New System.Drawing.Size(153, 23)
         Me.Label8.TabIndex = 29
         Me.Label8.Text = "Şoför Tel No:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -271,9 +288,9 @@ Partial Class SoforFormu
         Me.AdSoyadAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.AdSoyadAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.AdSoyadAratxt.ForeColor = System.Drawing.Color.Black
-        Me.AdSoyadAratxt.Location = New System.Drawing.Point(534, 11)
+        Me.AdSoyadAratxt.Location = New System.Drawing.Point(480, 11)
         Me.AdSoyadAratxt.Name = "AdSoyadAratxt"
-        Me.AdSoyadAratxt.Size = New System.Drawing.Size(171, 27)
+        Me.AdSoyadAratxt.Size = New System.Drawing.Size(153, 27)
         Me.AdSoyadAratxt.TabIndex = 28
         '
         'Label7
@@ -281,9 +298,9 @@ Partial Class SoforFormu
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(357, 13)
+        Me.Label7.Location = New System.Drawing.Point(321, 13)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(171, 23)
+        Me.Label7.Size = New System.Drawing.Size(153, 23)
         Me.Label7.TabIndex = 27
         Me.Label7.Text = "Şoför Ad Soyad:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -293,10 +310,10 @@ Partial Class SoforFormu
         Me.TcAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.TcAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.TcAratxt.ForeColor = System.Drawing.Color.Black
-        Me.TcAratxt.Location = New System.Drawing.Point(180, 11)
+        Me.TcAratxt.Location = New System.Drawing.Point(162, 11)
         Me.TcAratxt.MaxLength = 11
         Me.TcAratxt.Name = "TcAratxt"
-        Me.TcAratxt.Size = New System.Drawing.Size(171, 27)
+        Me.TcAratxt.Size = New System.Drawing.Size(153, 27)
         Me.TcAratxt.TabIndex = 26
         '
         'Label5
@@ -306,7 +323,7 @@ Partial Class SoforFormu
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(3, 13)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(171, 23)
+        Me.Label5.Size = New System.Drawing.Size(153, 23)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "Şoför TC:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -319,7 +336,7 @@ Partial Class SoforFormu
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(219, 23)
         Me.Label9.TabIndex = 28
-        Me.Label9.Text = "Personel Adres:"
+        Me.Label9.Text = "Şoför Adres:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TelNotxt
@@ -341,7 +358,7 @@ Partial Class SoforFormu
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(219, 23)
         Me.Label10.TabIndex = 28
-        Me.Label10.Text = "Personel Tel No:"
+        Me.Label10.Text = "Şoför Tel No:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Ucrettxt
@@ -362,7 +379,7 @@ Partial Class SoforFormu
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(219, 23)
         Me.Label6.TabIndex = 28
-        Me.Label6.Text = "Personel Ücret:"
+        Me.Label6.Text = "Şoför Ücret:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TableLayoutPanel2
@@ -455,4 +472,5 @@ Partial Class SoforFormu
     Friend WithEvents Label6 As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Cikis As Button
 End Class

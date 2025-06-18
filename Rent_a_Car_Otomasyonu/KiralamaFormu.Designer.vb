@@ -57,16 +57,16 @@ Partial Class KiralamaFormu
         Me.AdSoyadtxt = New System.Windows.Forms.TextBox()
         Me.Tctxt = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Puantxt = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.sofortc = New System.Windows.Forms.TextBox()
+        Me.soforadsoyad = New System.Windows.Forms.TextBox()
+        Me.soforpuanı = New System.Windows.Forms.TextBox()
+        Me.soforyas = New System.Windows.Forms.TextBox()
+        Me.telnosoforlabel = New System.Windows.Forms.Label()
+        Me.soforadres = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Ucrettxt = New System.Windows.Forms.TextBox()
+        Me.soforucret = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.sofortelno = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -172,7 +172,7 @@ Partial Class KiralamaFormu
         Me.GuncelleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GuncelleButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.GuncelleButton.ForeColor = System.Drawing.Color.Black
-        Me.GuncelleButton.Location = New System.Drawing.Point(1175, 405)
+        Me.GuncelleButton.Location = New System.Drawing.Point(1163, 410)
         Me.GuncelleButton.Name = "GuncelleButton"
         Me.GuncelleButton.Size = New System.Drawing.Size(129, 68)
         Me.GuncelleButton.TabIndex = 52
@@ -185,7 +185,7 @@ Partial Class KiralamaFormu
         Me.SilButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SilButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.SilButton.ForeColor = System.Drawing.Color.Black
-        Me.SilButton.Location = New System.Drawing.Point(1175, 489)
+        Me.SilButton.Location = New System.Drawing.Point(1163, 494)
         Me.SilButton.Name = "SilButton"
         Me.SilButton.Size = New System.Drawing.Size(129, 68)
         Me.SilButton.TabIndex = 51
@@ -198,7 +198,7 @@ Partial Class KiralamaFormu
         Me.EkleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.EkleButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.EkleButton.ForeColor = System.Drawing.Color.Black
-        Me.EkleButton.Location = New System.Drawing.Point(1175, 326)
+        Me.EkleButton.Location = New System.Drawing.Point(1163, 331)
         Me.EkleButton.Name = "EkleButton"
         Me.EkleButton.Size = New System.Drawing.Size(129, 68)
         Me.EkleButton.TabIndex = 50
@@ -211,7 +211,7 @@ Partial Class KiralamaFormu
         Me.GeriButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GeriButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.GeriButton.ForeColor = System.Drawing.Color.Black
-        Me.GeriButton.Location = New System.Drawing.Point(1175, 242)
+        Me.GeriButton.Location = New System.Drawing.Point(1163, 247)
         Me.GeriButton.Name = "GeriButton"
         Me.GeriButton.Size = New System.Drawing.Size(129, 68)
         Me.GeriButton.TabIndex = 49
@@ -286,6 +286,7 @@ Partial Class KiralamaFormu
         '
         'Kucret
         '
+        Me.Kucret.Enabled = False
         Me.Kucret.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Kucret.ForeColor = System.Drawing.Color.Black
         Me.Kucret.Location = New System.Drawing.Point(193, 481)
@@ -296,6 +297,7 @@ Partial Class KiralamaFormu
         '
         'Km
         '
+        Me.Km.Enabled = False
         Me.Km.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Km.ForeColor = System.Drawing.Color.Black
         Me.Km.Location = New System.Drawing.Point(193, 448)
@@ -306,6 +308,7 @@ Partial Class KiralamaFormu
         '
         'Modeltxt
         '
+        Me.Modeltxt.Enabled = False
         Me.Modeltxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Modeltxt.ForeColor = System.Drawing.Color.Black
         Me.Modeltxt.Location = New System.Drawing.Point(193, 382)
@@ -316,6 +319,7 @@ Partial Class KiralamaFormu
         '
         'cikisyili
         '
+        Me.cikisyili.Enabled = False
         Me.cikisyili.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.cikisyili.ForeColor = System.Drawing.Color.Black
         Me.cikisyili.Location = New System.Drawing.Point(193, 415)
@@ -326,6 +330,7 @@ Partial Class KiralamaFormu
         '
         'Markatxt
         '
+        Me.Markatxt.Enabled = False
         Me.Markatxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Markatxt.ForeColor = System.Drawing.Color.Black
         Me.Markatxt.Location = New System.Drawing.Point(193, 349)
@@ -336,6 +341,7 @@ Partial Class KiralamaFormu
         '
         'Plakatxt
         '
+        Me.Plakatxt.Enabled = False
         Me.Plakatxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Plakatxt.ForeColor = System.Drawing.Color.Black
         Me.Plakatxt.Location = New System.Drawing.Point(193, 316)
@@ -361,7 +367,7 @@ Partial Class KiralamaFormu
         '
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(385, 450)
+        Me.Label8.Location = New System.Drawing.Point(345, 450)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(219, 23)
         Me.Label8.TabIndex = 62
@@ -372,7 +378,7 @@ Partial Class KiralamaFormu
         '
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(385, 417)
+        Me.Label10.Location = New System.Drawing.Point(345, 417)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(219, 23)
         Me.Label10.TabIndex = 61
@@ -383,7 +389,7 @@ Partial Class KiralamaFormu
         '
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(385, 384)
+        Me.Label11.Location = New System.Drawing.Point(345, 384)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(219, 23)
         Me.Label11.TabIndex = 60
@@ -394,7 +400,7 @@ Partial Class KiralamaFormu
         '
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(385, 351)
+        Me.Label12.Location = New System.Drawing.Point(345, 351)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(219, 23)
         Me.Label12.TabIndex = 59
@@ -405,7 +411,7 @@ Partial Class KiralamaFormu
         '
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(385, 318)
+        Me.Label13.Location = New System.Drawing.Point(345, 318)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(219, 23)
         Me.Label13.TabIndex = 58
@@ -414,27 +420,30 @@ Partial Class KiralamaFormu
         '
         'Adrestxt
         '
+        Me.Adrestxt.Enabled = False
         Me.Adrestxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Adrestxt.ForeColor = System.Drawing.Color.Black
-        Me.Adrestxt.Location = New System.Drawing.Point(610, 448)
+        Me.Adrestxt.Location = New System.Drawing.Point(570, 448)
         Me.Adrestxt.Name = "Adrestxt"
         Me.Adrestxt.Size = New System.Drawing.Size(181, 27)
         Me.Adrestxt.TabIndex = 57
         '
         'Yastxt
         '
+        Me.Yastxt.Enabled = False
         Me.Yastxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Yastxt.ForeColor = System.Drawing.Color.Black
-        Me.Yastxt.Location = New System.Drawing.Point(610, 382)
+        Me.Yastxt.Location = New System.Drawing.Point(570, 382)
         Me.Yastxt.Name = "Yastxt"
         Me.Yastxt.Size = New System.Drawing.Size(181, 27)
         Me.Yastxt.TabIndex = 56
         '
         'TelNotxt
         '
+        Me.TelNotxt.Enabled = False
         Me.TelNotxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.TelNotxt.ForeColor = System.Drawing.Color.Black
-        Me.TelNotxt.Location = New System.Drawing.Point(610, 415)
+        Me.TelNotxt.Location = New System.Drawing.Point(570, 415)
         Me.TelNotxt.MaxLength = 11
         Me.TelNotxt.Name = "TelNotxt"
         Me.TelNotxt.Size = New System.Drawing.Size(181, 27)
@@ -442,9 +451,10 @@ Partial Class KiralamaFormu
         '
         'AdSoyadtxt
         '
+        Me.AdSoyadtxt.Enabled = False
         Me.AdSoyadtxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.AdSoyadtxt.ForeColor = System.Drawing.Color.Black
-        Me.AdSoyadtxt.Location = New System.Drawing.Point(610, 349)
+        Me.AdSoyadtxt.Location = New System.Drawing.Point(570, 349)
         Me.AdSoyadtxt.MaxLength = 20
         Me.AdSoyadtxt.Name = "AdSoyadtxt"
         Me.AdSoyadtxt.Size = New System.Drawing.Size(181, 27)
@@ -452,9 +462,10 @@ Partial Class KiralamaFormu
         '
         'Tctxt
         '
+        Me.Tctxt.Enabled = False
         Me.Tctxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Tctxt.ForeColor = System.Drawing.Color.Black
-        Me.Tctxt.Location = New System.Drawing.Point(610, 316)
+        Me.Tctxt.Location = New System.Drawing.Point(570, 316)
         Me.Tctxt.MaxLength = 11
         Me.Tctxt.Name = "Tctxt"
         Me.Tctxt.Size = New System.Drawing.Size(181, 27)
@@ -466,126 +477,133 @@ Partial Class KiralamaFormu
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(610, 263)
+        Me.Button2.Location = New System.Drawing.Point(570, 263)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(181, 36)
         Me.Button2.TabIndex = 50
         Me.Button2.Text = "Müşteri Seç"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'sofortc
         '
-        Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(967, 314)
-        Me.TextBox1.MaxLength = 11
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(181, 27)
-        Me.TextBox1.TabIndex = 63
+        Me.sofortc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.sofortc.Enabled = False
+        Me.sofortc.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.sofortc.ForeColor = System.Drawing.Color.Black
+        Me.sofortc.Location = New System.Drawing.Point(933, 314)
+        Me.sofortc.MaxLength = 11
+        Me.sofortc.Name = "sofortc"
+        Me.sofortc.Size = New System.Drawing.Size(181, 27)
+        Me.sofortc.TabIndex = 63
         '
-        'TextBox2
+        'soforadsoyad
         '
-        Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.TextBox2.Location = New System.Drawing.Point(967, 347)
-        Me.TextBox2.MaxLength = 20
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(181, 27)
-        Me.TextBox2.TabIndex = 64
+        Me.soforadsoyad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.soforadsoyad.Enabled = False
+        Me.soforadsoyad.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.soforadsoyad.ForeColor = System.Drawing.Color.Black
+        Me.soforadsoyad.Location = New System.Drawing.Point(933, 347)
+        Me.soforadsoyad.MaxLength = 20
+        Me.soforadsoyad.Name = "soforadsoyad"
+        Me.soforadsoyad.Size = New System.Drawing.Size(181, 27)
+        Me.soforadsoyad.TabIndex = 64
         '
-        'Puantxt
+        'soforpuanı
         '
-        Me.Puantxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.Puantxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Puantxt.ForeColor = System.Drawing.Color.Black
-        Me.Puantxt.Location = New System.Drawing.Point(967, 413)
-        Me.Puantxt.MaxLength = 11
-        Me.Puantxt.Name = "Puantxt"
-        Me.Puantxt.Size = New System.Drawing.Size(181, 27)
-        Me.Puantxt.TabIndex = 65
+        Me.soforpuanı.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.soforpuanı.Enabled = False
+        Me.soforpuanı.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.soforpuanı.ForeColor = System.Drawing.Color.Black
+        Me.soforpuanı.Location = New System.Drawing.Point(933, 413)
+        Me.soforpuanı.MaxLength = 11
+        Me.soforpuanı.Name = "soforpuanı"
+        Me.soforpuanı.Size = New System.Drawing.Size(181, 27)
+        Me.soforpuanı.TabIndex = 65
         '
-        'TextBox3
+        'soforyas
         '
-        Me.TextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.TextBox3.ForeColor = System.Drawing.Color.Black
-        Me.TextBox3.Location = New System.Drawing.Point(967, 380)
-        Me.TextBox3.MaxLength = 3
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(181, 27)
-        Me.TextBox3.TabIndex = 66
+        Me.soforyas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.soforyas.Enabled = False
+        Me.soforyas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.soforyas.ForeColor = System.Drawing.Color.Black
+        Me.soforyas.Location = New System.Drawing.Point(933, 380)
+        Me.soforyas.MaxLength = 3
+        Me.soforyas.Name = "soforyas"
+        Me.soforyas.Size = New System.Drawing.Size(181, 27)
+        Me.soforyas.TabIndex = 66
         '
-        'Label14
+        'telnosoforlabel
         '
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(742, 450)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(219, 23)
-        Me.Label14.TabIndex = 74
-        Me.Label14.Text = "Personel Tel No:"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.telnosoforlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.telnosoforlabel.ForeColor = System.Drawing.Color.White
+        Me.telnosoforlabel.Location = New System.Drawing.Point(708, 450)
+        Me.telnosoforlabel.Name = "telnosoforlabel"
+        Me.telnosoforlabel.Size = New System.Drawing.Size(219, 23)
+        Me.telnosoforlabel.TabIndex = 74
+        Me.telnosoforlabel.Text = "Soför Tel No:"
+        Me.telnosoforlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TextBox4
+        'soforadres
         '
-        Me.TextBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.TextBox4.ForeColor = System.Drawing.Color.Black
-        Me.TextBox4.Location = New System.Drawing.Point(967, 479)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(181, 27)
-        Me.TextBox4.TabIndex = 67
+        Me.soforadres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.soforadres.Enabled = False
+        Me.soforadres.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.soforadres.ForeColor = System.Drawing.Color.Black
+        Me.soforadres.Location = New System.Drawing.Point(933, 479)
+        Me.soforadres.Name = "soforadres"
+        Me.soforadres.Size = New System.Drawing.Size(181, 27)
+        Me.soforadres.TabIndex = 67
         '
         'Label15
         '
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(742, 516)
+        Me.Label15.Location = New System.Drawing.Point(708, 516)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(219, 23)
         Me.Label15.TabIndex = 75
-        Me.Label15.Text = "Personel Ücret:"
+        Me.Label15.Text = "Soför Ücret:"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Ucrettxt
+        'soforucret
         '
-        Me.Ucrettxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.Ucrettxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Ucrettxt.ForeColor = System.Drawing.Color.Black
-        Me.Ucrettxt.Location = New System.Drawing.Point(967, 512)
-        Me.Ucrettxt.Name = "Ucrettxt"
-        Me.Ucrettxt.Size = New System.Drawing.Size(181, 27)
-        Me.Ucrettxt.TabIndex = 68
+        Me.soforucret.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.soforucret.Enabled = False
+        Me.soforucret.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.soforucret.ForeColor = System.Drawing.Color.Black
+        Me.soforucret.Location = New System.Drawing.Point(933, 512)
+        Me.soforucret.Name = "soforucret"
+        Me.soforucret.Size = New System.Drawing.Size(181, 27)
+        Me.soforucret.TabIndex = 68
         '
         'Label16
         '
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(742, 483)
+        Me.Label16.Location = New System.Drawing.Point(708, 483)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(219, 23)
         Me.Label16.TabIndex = 76
-        Me.Label16.Text = "Personel Adres:"
+        Me.Label16.Text = "Soför Adres:"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TextBox5
+        'sofortelno
         '
-        Me.TextBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.TextBox5.ForeColor = System.Drawing.Color.Black
-        Me.TextBox5.Location = New System.Drawing.Point(967, 446)
-        Me.TextBox5.MaxLength = 10
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(181, 27)
-        Me.TextBox5.TabIndex = 69
+        Me.sofortelno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.sofortelno.Enabled = False
+        Me.sofortelno.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.sofortelno.ForeColor = System.Drawing.Color.Black
+        Me.sofortelno.Location = New System.Drawing.Point(933, 446)
+        Me.sofortelno.MaxLength = 10
+        Me.sofortelno.Name = "sofortelno"
+        Me.sofortelno.Size = New System.Drawing.Size(181, 27)
+        Me.sofortelno.TabIndex = 69
         '
         'Label17
         '
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(742, 415)
+        Me.Label17.Location = New System.Drawing.Point(708, 415)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(219, 23)
         Me.Label17.TabIndex = 73
@@ -596,7 +614,7 @@ Partial Class KiralamaFormu
         '
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(742, 316)
+        Me.Label18.Location = New System.Drawing.Point(708, 316)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(219, 23)
         Me.Label18.TabIndex = 70
@@ -607,7 +625,7 @@ Partial Class KiralamaFormu
         '
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(742, 382)
+        Me.Label19.Location = New System.Drawing.Point(708, 382)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(219, 23)
         Me.Label19.TabIndex = 72
@@ -618,7 +636,7 @@ Partial Class KiralamaFormu
         '
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.White
-        Me.Label20.Location = New System.Drawing.Point(742, 349)
+        Me.Label20.Location = New System.Drawing.Point(708, 349)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(219, 23)
         Me.Label20.TabIndex = 71
@@ -631,7 +649,7 @@ Partial Class KiralamaFormu
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(967, 263)
+        Me.Button3.Location = New System.Drawing.Point(933, 263)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(181, 36)
         Me.Button3.TabIndex = 50
@@ -644,37 +662,7 @@ Partial Class KiralamaFormu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1304, 579)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Adrestxt)
-        Me.Controls.Add(Me.Yastxt)
-        Me.Controls.Add(Me.TelNotxt)
-        Me.Controls.Add(Me.AdSoyadtxt)
-        Me.Controls.Add(Me.Tctxt)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Puantxt)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.Ucrettxt)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.GuncelleButton)
-        Me.Controls.Add(Me.SilButton)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.EkleButton)
-        Me.Controls.Add(Me.GeriButton)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
@@ -687,6 +675,36 @@ Partial Class KiralamaFormu
         Me.Controls.Add(Me.cikisyili)
         Me.Controls.Add(Me.Markatxt)
         Me.Controls.Add(Me.Plakatxt)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Adrestxt)
+        Me.Controls.Add(Me.Yastxt)
+        Me.Controls.Add(Me.TelNotxt)
+        Me.Controls.Add(Me.AdSoyadtxt)
+        Me.Controls.Add(Me.Tctxt)
+        Me.Controls.Add(Me.sofortc)
+        Me.Controls.Add(Me.soforadsoyad)
+        Me.Controls.Add(Me.soforpuanı)
+        Me.Controls.Add(Me.soforyas)
+        Me.Controls.Add(Me.telnosoforlabel)
+        Me.Controls.Add(Me.soforadres)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.soforucret)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.sofortelno)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.GuncelleButton)
+        Me.Controls.Add(Me.SilButton)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.EkleButton)
+        Me.Controls.Add(Me.GeriButton)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -736,16 +754,16 @@ Partial Class KiralamaFormu
     Friend WithEvents AdSoyadtxt As TextBox
     Friend WithEvents Tctxt As TextBox
     Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Puantxt As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents sofortc As TextBox
+    Friend WithEvents soforadsoyad As TextBox
+    Friend WithEvents soforpuanı As TextBox
+    Friend WithEvents soforyas As TextBox
+    Friend WithEvents telnosoforlabel As Label
+    Friend WithEvents soforadres As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents Ucrettxt As TextBox
+    Friend WithEvents soforucret As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents sofortelno As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label

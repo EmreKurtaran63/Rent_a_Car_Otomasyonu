@@ -11,7 +11,10 @@
         Me.Hide()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub MusteriButon_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        MusteriFormu.TableLayoutPanel2.Show()
+        MusteriFormu.DataGridView1.Dock = DockStyle.Top
+        MusteriFormu.Cikis.Hide()
         MusteriFormu.Show()
         Me.Hide()
     End Sub
@@ -34,6 +37,9 @@
     End Sub
 
     Private Sub SoforButton_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        SoforFormu.TableLayoutPanel2.Show()
+        SoforFormu.DataGridView1.Dock = DockStyle.Top
+        SoforFormu.Cikis.Hide()
         SoforFormu.Show()
         Me.Hide()
     End Sub

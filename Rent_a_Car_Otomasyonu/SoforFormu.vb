@@ -2,13 +2,27 @@
 
 Public Class SoforFormu
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Tctxt.Text = DataGridView1.SelectedRows(0).Cells(0).Value.ToString()
-        AdSoyadtxt.Text = DataGridView1.SelectedRows(0).Cells(1).Value.ToString()
-        Yastxt.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString()
-        Puantxt.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString()
-        TelNotxt.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString()
-        Adrestxt.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString()
-        Ucrettxt.Text = DataGridView1.SelectedRows(0).Cells(6).Value.ToString()
+
+
+        If KiralamaFormu.Visible = True Then
+            KiralamaFormu.sofortc.Text = DataGridView1.SelectedRows(0).Cells(0).Value.ToString()
+            KiralamaFormu.soforadsoyad.Text = DataGridView1.SelectedRows(0).Cells(1).Value.ToString()
+            KiralamaFormu.soforyas.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString()
+            KiralamaFormu.soforpuanı.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString()
+            KiralamaFormu.sofortelno.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString()
+            KiralamaFormu.soforadres.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString()
+            KiralamaFormu.soforucret.Text = DataGridView1.SelectedRows(0).Cells(6).Value.ToString()
+            Me.Hide()
+
+        Else
+            Tctxt.Text = DataGridView1.SelectedRows(0).Cells(0).Value.ToString()
+            AdSoyadtxt.Text = DataGridView1.SelectedRows(0).Cells(1).Value.ToString()
+            Yastxt.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString()
+            Puantxt.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString()
+            TelNotxt.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString()
+            Adrestxt.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString()
+            Ucrettxt.Text = DataGridView1.SelectedRows(0).Cells(6).Value.ToString()
+        End If
     End Sub
 
     Private Sub EkleButton_Click(sender As Object, e As EventArgs) Handles EkleButton.Click
@@ -273,5 +287,9 @@ Public Class SoforFormu
         If Char.IsWhiteSpace(e.KeyChar) And AdSoyadAratxt.Text.Length < 1 Then
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub Cıkıs_Click(sender As Object, e As EventArgs) Handles Cikis.Click
+        Me.Hide()
     End Sub
 End Class
