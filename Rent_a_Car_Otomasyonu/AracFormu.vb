@@ -161,6 +161,9 @@ Public Class AracFormu
         End If
     End Sub
 
+    Private Sub Cikis_Click(sender As Object, e As EventArgs) Handles Cikis.Click
+        Me.Hide()
+    End Sub
 
     Private Sub Km_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Km.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then

@@ -6,8 +6,10 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim afrm As AracFormu = New AracFormu()
-        afrm.Show()
+        AracFormu.TableLayoutPanel2.Show()
+        AracFormu.DataGridView1.Dock = DockStyle.Top
+        AracFormu.Cikis.Hide()
+        AracFormu.Show()
         Me.Hide()
     End Sub
 

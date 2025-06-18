@@ -21,8 +21,15 @@ Public Class KiralamaFormu
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         MusteriFormu.TableLayoutPanel2.Hide()
-        MusteriFormu.DataGridView1.Dock = DockStyle.Fill
+        MusteriFormu.DataGridView1.Dock = DockStyle.Fill REM problem burda
         MusteriFormu.Cikis.Show()
         MusteriFormu.ShowDialog()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        AracFormu.TableLayoutPanel2.Visible = False
+        AracFormu.DataGridView1.Dock = DockStyle.Fill
+        AracFormu.Cikis.Show()
+        AracFormu.ShowDialog()
     End Sub
 End Class
