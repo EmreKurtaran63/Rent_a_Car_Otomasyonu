@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Net.Mime.MediaTypeNames
 
 Public Class AracFormu
 
@@ -59,12 +60,37 @@ Public Class AracFormu
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Plakatxt.Text = DataGridView1.SelectedRows(0).Cells(0).Value.ToString()
-        Markatxt.Text = DataGridView1.SelectedRows(0).Cells(1).Value.ToString()
-        Modeltxt.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString()
-        cikisyili.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString()
-        Km.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString()
-        Kucret.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString()
+
+
+        If KiralamaFormu.Visible = True Then
+            KiralamaFormu.Plakatxt.Text = DataGridView1.SelectedRows(0).Cells(0).Value.ToString()
+            KiralamaFormu.Markatxt.Text = DataGridView1.SelectedRows(0).Cells(1).Value.ToString()
+            KiralamaFormu.Modeltxt.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString()
+            KiralamaFormu.cikisyili.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString()
+            KiralamaFormu.Km.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString()
+
+            If DataGridView1.SelectedRows(0).Cells(5).Value.ToString() IsNot String.Empty Then
+                KiralamaFormu.Kucret.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString()
+            Else
+                KiralamaFormu.Kucret.Text = "0"
+            End If
+
+            Dim ucret As Integer = Convert.ToInt32(KiralamaFormu.Kucret.Text) + Convert.ToInt32(KiralamaFormu.soforucret.Text)
+            KiralamaFormu.Kucretitxt.Text = ucret * Convert.ToInt32(KiralamaFormu.Ksuresitxt.Text.Trim())
+
+            Me.Hide()
+
+
+
+
+        Else
+            Plakatxt.Text = DataGridView1.SelectedRows(0).Cells(0).Value.ToString()
+            Markatxt.Text = DataGridView1.SelectedRows(0).Cells(1).Value.ToString()
+            Modeltxt.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString()
+            cikisyili.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString()
+            Km.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString()
+            Kucret.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString()
+        End If
     End Sub
 
     Private Sub GuncelleButton_Click(sender As Object, e As EventArgs) Handles GuncelleButton.Click
@@ -95,22 +121,26 @@ Public Class AracFormu
     End Sub
 
     Private Sub SilButton_Click(sender As Object, e As EventArgs) Handles SilButton.Click
+
         Try
-            Dim baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source='Veritabani/Rent_a_Car_Veritabani.mdb'") 'Veritabanımızın yerini belirtiyoruz.
-            baglanti.Open()
-            Dim eklekomutu As String = "Delete from Arac_Tablosu where Arac_Plaka=@plaka"
-            Dim cmd As OleDbCommand = New OleDbCommand(eklekomutu, baglanti)
+            If MsgBox("Silmek İstediğinize emin misiniz?", vbYesNo + vbQuestion, "Veri Silme") = DialogResult.Yes Then
+                Dim baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source='Veritabani/Rent_a_Car_Veritabani.mdb'") 'Veritabanımızın yerini belirtiyoruz.
+                baglanti.Open()
+                Dim eklekomutu As String = "Delete from Arac_Tablosu where Arac_Plaka=@plaka"
+                Dim cmd As OleDbCommand = New OleDbCommand(eklekomutu, baglanti)
 
-            cmd.Parameters.AddWithValue("@plaka", Plakatxt.Text.Trim())
+                cmd.Parameters.AddWithValue("@plaka", Plakatxt.Text.Trim())
 
-            Dim obj As Integer = cmd.ExecuteNonQuery()
-            If obj > 0 Then
-                MessageBox.Show("Silindi")
-                Listele(PlakaAratxt.Text.Trim(), kmAra, isaret)
-            Else
-                MessageBox.Show("Bulunamadı")
+                Dim obj As Integer = cmd.ExecuteNonQuery()
+                If obj > 0 Then
+                    MessageBox.Show("Silindi")
+                    Listele(PlakaAratxt.Text.Trim(), kmAra, isaret)
+                Else
+                    MessageBox.Show("Bulunamadı")
+                End If
+                baglanti.Close()
             End If
-            baglanti.Close()
+
         Catch ex As Exception
             MessageBox.Show("Hata Oluştu: " + ex.Message)
         End Try
@@ -151,9 +181,6 @@ Public Class AracFormu
         End If
     End Sub
 
-    Private Sub AracFormu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        Application.Exit()
-    End Sub
 
     Private Sub cikisyili_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cikisyili.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
@@ -164,6 +191,7 @@ Public Class AracFormu
     Private Sub Cikis_Click(sender As Object, e As EventArgs) Handles Cikis.Click
         Me.Hide()
     End Sub
+
 
     Private Sub Km_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Km.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then

@@ -1,5 +1,8 @@
 ﻿Public Class UserAnaMenu
     Private Sub MusteriButton_Click(sender As Object, e As EventArgs) Handles MusteriButton.Click
+        MusteriFormu.TableLayoutPanel2.Show()
+        MusteriFormu.DataGridView1.Dock = DockStyle.Top
+        MusteriFormu.Cikis.Hide()
         MusteriFormu.Show()
         Me.Hide()
     End Sub
@@ -16,6 +19,9 @@
     End Sub
 
     Private Sub SoforButton_Click(sender As Object, e As EventArgs) Handles SoforButton.Click
+        SoforFormu.TableLayoutPanel2.Show()
+        SoforFormu.DataGridView1.Dock = DockStyle.Top
+        SoforFormu.Cikis.Hide()
         SoforFormu.Show()
         Me.Hide()
     End Sub

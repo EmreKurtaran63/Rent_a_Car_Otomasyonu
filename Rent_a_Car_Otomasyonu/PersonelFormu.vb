@@ -243,6 +243,7 @@ Public Class PersonelFormu
         If AdSoyadtxt.Text.StartsWith(" ") Then
             AdSoyadtxt.Text = AdSoyadtxt.Text.Substring(1)
         End If
+
     End Sub
 
     Private Sub TelNotxt_TextChanged(sender As Object, e As EventArgs) Handles TelNotxt.TextChanged

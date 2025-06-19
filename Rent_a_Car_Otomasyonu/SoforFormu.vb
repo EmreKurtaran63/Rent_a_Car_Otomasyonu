@@ -11,7 +11,14 @@ Public Class SoforFormu
             KiralamaFormu.soforpuanı.Text = DataGridView1.SelectedRows(0).Cells(3).Value.ToString()
             KiralamaFormu.sofortelno.Text = DataGridView1.SelectedRows(0).Cells(4).Value.ToString()
             KiralamaFormu.soforadres.Text = DataGridView1.SelectedRows(0).Cells(5).Value.ToString()
-            KiralamaFormu.soforucret.Text = DataGridView1.SelectedRows(0).Cells(6).Value.ToString()
+            If DataGridView1.SelectedRows(0).Cells(6).Value.ToString() IsNot String.Empty Then
+                KiralamaFormu.soforucret.Text = DataGridView1.SelectedRows(0).Cells(6).Value.ToString()
+            Else
+                KiralamaFormu.soforucret.Text = "0"
+            End If
+            Dim ucret As Integer = Convert.ToInt32(KiralamaFormu.Kucret.Text) + Convert.ToInt32(KiralamaFormu.soforucret.Text)
+            KiralamaFormu.Kucretitxt.Text = ucret * Convert.ToInt32(KiralamaFormu.Ksuresitxt.Text.Trim())
+
             Me.Hide()
 
         Else

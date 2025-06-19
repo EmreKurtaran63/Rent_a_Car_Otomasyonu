@@ -40,6 +40,7 @@ Partial Class AracFormu
         Me.GuncelleButton = New System.Windows.Forms.Button()
         Me.SilButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Cikis = New System.Windows.Forms.Button()
         Me.KMaratxt = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -48,7 +49,6 @@ Partial Class AracFormu
         Me.AltPanel = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Cikis = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.AltPanel.SuspendLayout()
@@ -271,6 +271,20 @@ Partial Class AracFormu
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1136, 62)
         Me.TableLayoutPanel1.TabIndex = 35
         '
+        'Cikis
+        '
+        Me.Cikis.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Cikis.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Cikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cikis.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Cikis.ForeColor = System.Drawing.Color.White
+        Me.Cikis.Location = New System.Drawing.Point(1039, 14)
+        Me.Cikis.Name = "Cikis"
+        Me.Cikis.Size = New System.Drawing.Size(87, 33)
+        Me.Cikis.TabIndex = 32
+        Me.Cikis.Text = "X"
+        Me.Cikis.UseVisualStyleBackColor = False
+        '
         'KMaratxt
         '
         Me.KMaratxt.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -330,9 +344,9 @@ Partial Class AracFormu
         '
         Me.AltPanel.Controls.Add(Me.TableLayoutPanel2)
         Me.AltPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AltPanel.Location = New System.Drawing.Point(0, 239)
+        Me.AltPanel.Location = New System.Drawing.Point(0, 62)
         Me.AltPanel.Name = "AltPanel"
-        Me.AltPanel.Size = New System.Drawing.Size(1136, 269)
+        Me.AltPanel.Size = New System.Drawing.Size(1136, 446)
         Me.AltPanel.TabIndex = 36
         '
         'TableLayoutPanel2
@@ -340,8 +354,8 @@ Partial Class AracFormu
         Me.TableLayoutPanel2.ColumnCount = 1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Panel1, 0, 0)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 177)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -372,28 +386,14 @@ Partial Class AracFormu
         Me.Panel1.Size = New System.Drawing.Size(996, 247)
         Me.Panel1.TabIndex = 17
         '
-        'Cikis
-        '
-        Me.Cikis.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Cikis.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Cikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Cikis.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Cikis.ForeColor = System.Drawing.Color.White
-        Me.Cikis.Location = New System.Drawing.Point(1039, 14)
-        Me.Cikis.Name = "Cikis"
-        Me.Cikis.Size = New System.Drawing.Size(87, 33)
-        Me.Cikis.TabIndex = 32
-        Me.Cikis.Text = "X"
-        Me.Cikis.UseVisualStyleBackColor = False
-        '
         'AracFormu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(15, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1136, 508)
-        Me.Controls.Add(Me.AltPanel)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.AltPanel)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "AracFormu"

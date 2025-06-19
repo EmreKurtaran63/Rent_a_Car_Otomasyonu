@@ -38,6 +38,7 @@ Partial Class MusteriFormu
         Me.Tctxt = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Cikis = New System.Windows.Forms.Button()
         Me.TelNoAratxt = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.AdSoyadAratxt = New System.Windows.Forms.TextBox()
@@ -46,7 +47,6 @@ Partial Class MusteriFormu
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Cikis = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -231,7 +231,7 @@ Partial Class MusteriFormu
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66736!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66736!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66319!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Cikis, 6, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TelNoAratxt, 5, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label8, 4, 0)
@@ -247,14 +247,28 @@ Partial Class MusteriFormu
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1067, 49)
         Me.TableLayoutPanel1.TabIndex = 34
         '
+        'Cikis
+        '
+        Me.Cikis.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Cikis.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Cikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cikis.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.Cikis.ForeColor = System.Drawing.Color.White
+        Me.Cikis.Location = New System.Drawing.Point(967, 8)
+        Me.Cikis.Name = "Cikis"
+        Me.Cikis.Size = New System.Drawing.Size(87, 33)
+        Me.Cikis.TabIndex = 32
+        Me.Cikis.Text = "X"
+        Me.Cikis.UseVisualStyleBackColor = False
+        '
         'TelNoAratxt
         '
         Me.TelNoAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.TelNoAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.TelNoAratxt.ForeColor = System.Drawing.Color.Black
-        Me.TelNoAratxt.Location = New System.Drawing.Point(803, 11)
+        Me.TelNoAratxt.Location = New System.Drawing.Point(798, 11)
         Me.TelNoAratxt.Name = "TelNoAratxt"
-        Me.TelNoAratxt.Size = New System.Drawing.Size(154, 27)
+        Me.TelNoAratxt.Size = New System.Drawing.Size(153, 27)
         Me.TelNoAratxt.TabIndex = 30
         '
         'Label8
@@ -262,9 +276,9 @@ Partial Class MusteriFormu
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(643, 13)
+        Me.Label8.Location = New System.Drawing.Point(639, 13)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(154, 23)
+        Me.Label8.Size = New System.Drawing.Size(153, 23)
         Me.Label8.TabIndex = 29
         Me.Label8.Text = "Müşteri Tel No:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -274,9 +288,9 @@ Partial Class MusteriFormu
         Me.AdSoyadAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.AdSoyadAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.AdSoyadAratxt.ForeColor = System.Drawing.Color.Black
-        Me.AdSoyadAratxt.Location = New System.Drawing.Point(483, 11)
+        Me.AdSoyadAratxt.Location = New System.Drawing.Point(480, 11)
         Me.AdSoyadAratxt.Name = "AdSoyadAratxt"
-        Me.AdSoyadAratxt.Size = New System.Drawing.Size(154, 27)
+        Me.AdSoyadAratxt.Size = New System.Drawing.Size(153, 27)
         Me.AdSoyadAratxt.TabIndex = 28
         '
         'Label7
@@ -284,9 +298,9 @@ Partial Class MusteriFormu
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(323, 13)
+        Me.Label7.Location = New System.Drawing.Point(321, 13)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(154, 23)
+        Me.Label7.Size = New System.Drawing.Size(153, 23)
         Me.Label7.TabIndex = 27
         Me.Label7.Text = "Müşteri Ad Soyad:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -296,9 +310,9 @@ Partial Class MusteriFormu
         Me.TcAratxt.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.TcAratxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
         Me.TcAratxt.ForeColor = System.Drawing.Color.Black
-        Me.TcAratxt.Location = New System.Drawing.Point(163, 11)
+        Me.TcAratxt.Location = New System.Drawing.Point(162, 11)
         Me.TcAratxt.Name = "TcAratxt"
-        Me.TcAratxt.Size = New System.Drawing.Size(154, 27)
+        Me.TcAratxt.Size = New System.Drawing.Size(153, 27)
         Me.TcAratxt.TabIndex = 26
         '
         'Label5
@@ -308,7 +322,7 @@ Partial Class MusteriFormu
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(3, 13)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(154, 23)
+        Me.Label5.Size = New System.Drawing.Size(153, 23)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "Müşteri TC:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -347,20 +361,6 @@ Partial Class MusteriFormu
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(1067, 303)
         Me.TableLayoutPanel2.TabIndex = 36
-        '
-        'Cikis
-        '
-        Me.Cikis.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Cikis.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Cikis.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Cikis.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Cikis.ForeColor = System.Drawing.Color.White
-        Me.Cikis.Location = New System.Drawing.Point(970, 8)
-        Me.Cikis.Name = "Cikis"
-        Me.Cikis.Size = New System.Drawing.Size(87, 33)
-        Me.Cikis.TabIndex = 32
-        Me.Cikis.Text = "X"
-        Me.Cikis.UseVisualStyleBackColor = False
         '
         'MusteriFormu
         '

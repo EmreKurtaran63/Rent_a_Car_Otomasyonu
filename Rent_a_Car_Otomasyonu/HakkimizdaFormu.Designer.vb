@@ -62,7 +62,7 @@ Partial Class HakkimizdaFormu
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(349, 140)
         Me.TextBox1.TabIndex = 9
-        Me.TextBox1.Text = "NİZİP MESLEK YÜKSEK OKULU RENT A CAR OTOMASYONU PROGRAMI"
+        Me.TextBox1.Text = "RENT A CAR OTOMASYONU" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " PROGRAMI"
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox2
@@ -75,8 +75,8 @@ Partial Class HakkimizdaFormu
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(349, 231)
         Me.TextBox2.TabIndex = 10
-        Me.TextBox2.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bu Program " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Emre Kurtaran" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ömer Yılmaz" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tamer Enes Melek " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tarafından Yapılmış" &
-    "tır. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Telif hakları Yukarıdaki Üç İsme Aittir Ve Tüm Hakları Saklıdır."
+        Me.TextBox2.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bu Program " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Emre Kurtaran" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ömer Yılmaz" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tarafından Yapılmıştır. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Teli" &
+    "f hakları Yukarıdaki Üç İsme Aittir Ve Tüm Hakları Saklıdır."
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'HakkimizdaFormu

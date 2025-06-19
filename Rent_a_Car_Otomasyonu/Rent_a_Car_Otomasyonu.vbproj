@@ -213,7 +213,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Visual Basic Projesi.docx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Rent_a_Car_Otomasyonu.exe" />

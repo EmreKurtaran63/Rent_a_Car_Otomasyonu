@@ -87,21 +87,24 @@ Public Class MusteriFormu
 
     Private Sub SilButton_Click(sender As Object, e As EventArgs) Handles SilButton.Click
         Try
-            Dim baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source='Veritabani/Rent_a_Car_Veritabani.mdb'") 'Veritabanımızın yerini belirtiyoruz.
-            baglanti.Open()
-            Dim eklekomutu As String = "Delete from Musteri_Tablosu where Musteri_TC=@TC"
-            Dim cmd As OleDbCommand = New OleDbCommand(eklekomutu, baglanti)
+            If MsgBox("Silmek İstediğinize emin misiniz?", vbYesNo + vbQuestion, "Veri Silme") = DialogResult.Yes Then
+                Dim baglanti As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source='Veritabani/Rent_a_Car_Veritabani.mdb'") 'Veritabanımızın yerini belirtiyoruz.
+                baglanti.Open()
+                Dim eklekomutu As String = "Delete from Musteri_Tablosu where Musteri_TC=@TC"
+                Dim cmd As OleDbCommand = New OleDbCommand(eklekomutu, baglanti)
 
-            cmd.Parameters.AddWithValue("@TC", Tctxt.Text.Trim())
+                cmd.Parameters.AddWithValue("@TC", Tctxt.Text.Trim())
 
-            Dim obj As Integer = cmd.ExecuteNonQuery()
-            If obj > 0 Then
-                MessageBox.Show("Silindi")
-                Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
-            Else
-                MessageBox.Show("Bulunamadı")
+                Dim obj As Integer = cmd.ExecuteNonQuery()
+                If obj > 0 Then
+                    MessageBox.Show("Silindi")
+                    Listele(TcAratxt.Text.Trim(), AdSoyadAratxt.Text.Trim(), TelNoAratxt.Text.Trim())
+                Else
+                    MessageBox.Show("Bulunamadı")
+                End If
+                baglanti.Close()
             End If
-            baglanti.Close()
+
         Catch ex As Exception
             MessageBox.Show("Hata Oluştu: " + ex.Message)
         End Try
@@ -170,5 +173,17 @@ Public Class MusteriFormu
 
     Private Sub Cikis_Click(sender As Object, e As EventArgs) Handles Cikis.Click
         Me.Hide()
+    End Sub
+
+    Private Sub AdSoyadtxt_TextChanged(sender As Object, e As EventArgs) Handles AdSoyadtxt.TextChanged
+
+
+        If (System.Text.RegularExpressions.Regex.IsMatch(AdSoyadtxt.Text, "[^a-zA-ZğĞüÜşŞıİöÖçÇğĞüÜşŞıİöÖçÇğĞüÜşŞıİöÖçÇ ]")) Then
+
+            AdSoyadtxt.Text = System.Text.RegularExpressions.Regex.Replace(AdSoyadtxt.Text, "[^a-zA-ZğĞüÜşŞıİöÖçÇğĞüÜşŞıİöÖçÇğĞüÜşŞıİöÖçÇ ]", "")
+            AdSoyadtxt.SelectionStart = AdSoyadtxt.Text.Length
+
+        End If
+
     End Sub
 End Class
